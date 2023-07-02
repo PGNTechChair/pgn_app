@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pgn_app/Controllers/AnimationAppearController.dart';
 
 class SignUp extends StatefulWidget {
   @override
@@ -14,30 +15,33 @@ class _SignUpState extends State<SignUp> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Container(
-              margin: EdgeInsets.all(20),
-              color: Colors.amber,
-              width: 100,
-              height: 100,
-              child: Align(
-                alignment: Alignment.center,
-                child: TextButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/home');
-                  },
-                  style: ButtonStyle(
-                    foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                  ),
-                  child: Text(
-                      "PGN",
-                    style: TextStyle(
-                        fontSize: 50,
-                        letterSpacing: 5.0,
-                        fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                )
-              )
+            AnimAppear(
+                delay: 500,
+                child: Container(
+                  margin: EdgeInsets.all(20),
+                  color: Colors.amber,
+                  width: 100,
+                  height: 100,
+                  child: Align(
+                      alignment: Alignment.center,
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/home');
+                        },
+                        style: ButtonStyle(
+                          foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                        ),
+                        child: Text(
+                          "PGN",
+                          style: TextStyle(
+                            fontSize: 50,
+                            letterSpacing: 5.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      )
+                    )
+                  )
             )
           ],
         ),
