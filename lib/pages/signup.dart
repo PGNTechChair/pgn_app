@@ -13,17 +13,17 @@ class _SignUpState extends State<SignUp> {
       backgroundColor: Colors.redAccent,
       body: SafeArea(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             AnimAppear(
                 delay: 250,
                 child: Container(
                   margin: EdgeInsets.fromLTRB(20,20,20,0),
                   color: Colors.redAccent,
-                  width: 150,
-                  height: 150,
+                  width: double.infinity,
+                  height: 135,
                   child: Align(
-                      alignment: Alignment.center,
+                      alignment: Alignment.bottomCenter,
                       child: TextButton(
                         onPressed: () {
                           Navigator.pushNamed(context, '/home');
@@ -47,8 +47,8 @@ class _SignUpState extends State<SignUp> {
                 delay: 250,
                 child: Container(
                   margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                  color: Colors.redAccent,
-                  width: 20,
+                  color: Colors.teal,
+                  width: double.infinity,
                   height: 50,
                   child: Align(
                     alignment: Alignment.topCenter,
@@ -63,7 +63,185 @@ class _SignUpState extends State<SignUp> {
                     )
                 )
               )
-            )
+            ),
+            SizedBox(height: 8.0),
+            AnimAppear(
+                delay: 250,
+                child: Container(
+                    margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    color: Colors.teal,
+                    width: 100,
+                    height: 20,
+                    child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                            "Sign Up",
+                            style: TextStyle(
+                              fontSize: 15,
+                              letterSpacing: 2.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            )
+                        )
+                    )
+                )
+            ),
+            AnimAppear(
+                delay: 250,
+                child: Container(
+                    margin: EdgeInsets.fromLTRB(10, 20, 10, 0),
+                    color: Colors.teal,
+                    width: 100,
+                    height: 20,
+                    child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                            "First Name",
+                            style: TextStyle(
+                              fontSize: 15,
+                              letterSpacing: 2.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            )
+                        )
+                    )
+                )
+            ),
+            SizedBox(height: 8.0),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(10,0,10,0),
+              child: AnimAppear(
+                delay: 250,
+                child: SizedBox(
+                  width: 300,
+                  height: 50,
+                  child: TextField(
+                      decoration: InputDecoration(
+                        fillColor: Colors.white70,
+                        filled: true,
+                        border: OutlineInputBorder(),
+                    ),
+                  ),
+                )
+              ),
+            ),
+            AnimAppear(
+                delay: 250,
+                child: Container(
+                    margin: EdgeInsets.fromLTRB(10, 20, 10, 0),
+                    color: Colors.teal,
+                    width: 100,
+                    height: 20,
+                    child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                            "Last Name",
+                            style: TextStyle(
+                              fontSize: 15,
+                              letterSpacing: 2.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            )
+                        )
+                    )
+                )
+            ),
+            SizedBox(height: 8.0),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(10,0,10,0),
+              child: AnimAppear(
+                  delay: 250,
+                  child: SizedBox(
+                    width: 300,
+                    height: 50,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        fillColor: Colors.white70,
+                        filled: true,
+                        border: OutlineInputBorder(),
+                      ),
+                    ),
+                  )
+              ),
+            ),
+            AnimAppear(
+                delay: 250,
+                child: Container(
+                    margin: EdgeInsets.fromLTRB(10, 20, 10, 0),
+                    color: Colors.teal,
+                    width: 100,
+                    height: 20,
+                    child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                            "Email",
+                            style: TextStyle(
+                              fontSize: 15,
+                              letterSpacing: 2.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            )
+                        )
+                    )
+                )
+            ),
+            SizedBox(height: 8.0),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(10,0,10,0),
+              child: AnimAppear(
+                  delay: 250,
+                  child: SizedBox(
+                    width: 300,
+                    height: 50,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        fillColor: Colors.white70,
+                        filled: true,
+                        border: OutlineInputBorder(),
+                      ),
+                    ),
+                  )
+              ),
+            ),
+            AnimAppear(
+                delay: 250,
+                child: Container(
+                    margin: EdgeInsets.fromLTRB(10, 20, 10, 0),
+                    color: Colors.teal,
+                    width: 100,
+                    height: 20,
+                    child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                            "Password",
+                            style: TextStyle(
+                              fontSize: 15,
+                              letterSpacing: 2.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            )
+                        )
+                    )
+                )
+            ),
+            SizedBox(height: 8.0),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(10,0,10,0),
+              child: AnimAppear(
+                  delay: 250,
+                  child: SizedBox(
+                    width: 300,
+                    height: 50,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        fillColor: Colors.white70,
+                        filled: true,
+                        border: OutlineInputBorder(),
+                      ),
+                    ),
+                  )
+              ),
+            ),
           ],
         ),
       ),
