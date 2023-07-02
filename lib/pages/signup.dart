@@ -18,10 +18,10 @@ class _SignUpState extends State<SignUp> {
             AnimAppear(
                 delay: 250,
                 child: Container(
-                  margin: EdgeInsets.all(20),
-                  color: Colors.amber,
-                  width: 100,
-                  height: 100,
+                  margin: EdgeInsets.fromLTRB(20,20,20,0),
+                  color: Colors.redAccent,
+                  width: 150,
+                  height: 150,
                   child: Align(
                       alignment: Alignment.center,
                       child: TextButton(
@@ -34,14 +34,35 @@ class _SignUpState extends State<SignUp> {
                         child: Text(
                           "PGN",
                           style: TextStyle(
-                            fontSize: 50,
+                            fontSize: 100,
                             letterSpacing: 5.0,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                       )
                     )
-                  )
+                  ),
+                ),
+            AnimAppear(
+                delay: 250,
+                child: Container(
+                  margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                  color: Colors.redAccent,
+                  width: 20,
+                  height: 50,
+                  child: Align(
+                    alignment: Alignment.topCenter,
+                    child: Text(
+                        "Creating the Leaders of Tomorrow",
+                        style: TextStyle(
+                          fontSize: 15,
+                          letterSpacing: 2.0,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        )
+                    )
+                )
+              )
             )
           ],
         ),
