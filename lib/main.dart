@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import "package:pgn_app/pages/home.dart";
+import "package:pgn_app/pages/signup.dart";
 
 void main() => runApp(MaterialApp(
     initialRoute: '/',
     routes: {
-      '/': (context) => Home(),
+      '/': (context) => SignUp(),
       '/home': (context) => Home(),
-      /*'/login': (context) => Login(),*/
+      '/signup': (context) => SignUp(),
     }
 ));

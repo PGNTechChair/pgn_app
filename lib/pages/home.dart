@@ -10,7 +10,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Text('home screen'),
+        child: Text('Home Screen'),
       ),
     );
   }
