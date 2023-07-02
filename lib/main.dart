@@ -8,5 +8,6 @@ void main() => runApp(MaterialApp(
       '/': (context) => SignUp(),
       '/home': (context) => Home(),
       '/signup': (context) => SignUp(),
+      /*'/thankyoupage': (context) => ThankYou(),*/
     }
 ));
