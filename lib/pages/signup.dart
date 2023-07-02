@@ -319,8 +319,33 @@ class _SignUpState extends State<SignUp> {
                         ),
                       ),
                     )
+                  ),
                 ),
-              ),
+              SizedBox(height: 30.0),
+              AnimAppear(
+                delay: 250,
+                child: Align(
+                  alignment: Alignment.center,
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/thankyou');
+                    },
+                    style: ButtonStyle(
+                      foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                      backgroundColor: MaterialStateProperty.all<Color>(Colors.amber)
+                    ),
+                    child: Text(
+                      "Submit",
+                      style: TextStyle(
+                        fontSize: 40,
+                        letterSpacing: 2.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                )
+
+              )
             ],
           ),
         ),
