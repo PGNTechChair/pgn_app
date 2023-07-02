@@ -20,7 +20,7 @@ class _AnimAppearState extends State<AnimAppear> with TickerProviderStateMixin {
     super.initState();
 
     _animController =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 500));
+        AnimationController(vsync: this, duration: Duration(milliseconds: 1000));
     final curve =
     CurvedAnimation(curve: Curves.decelerate, parent: _animController);
     _animOffset =

@@ -16,7 +16,7 @@ class _SignUpState extends State<SignUp> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             AnimAppear(
-                delay: 500,
+                delay: 250,
                 child: Container(
                   margin: EdgeInsets.all(20),
                   color: Colors.amber,
