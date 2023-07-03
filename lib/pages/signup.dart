@@ -25,24 +25,17 @@ class _SignUpState extends State<SignUp> {
                     height: 135,
                     child: Align(
                         alignment: Alignment.bottomCenter,
-                        child: TextButton(
-                          onPressed: () {
-                            Navigator.pushNamed(context, '/home');
-                          },
-                          style: ButtonStyle(
-                            foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                          ),
                           child: Text(
                             "PGN",
                             style: TextStyle(
                               fontSize: 100,
                               letterSpacing: 5.0,
                               fontWeight: FontWeight.bold,
+                              color: Colors.white
                             ),
                           ),
                         )
                       )
-                    ),
                   ),
               AnimAppear(
                   delay: 250,

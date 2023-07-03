@@ -36,7 +36,7 @@ class _ThankYouState extends State<ThankYou> {
                 alignment: Alignment.topCenter,
                 child: TextButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/home');
+                    Navigator.pushNamed(context, '/login');
                   },
                   style: ButtonStyle(
                       foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
