@@ -38,7 +38,7 @@ class _LoginState extends State<Login> {
                     children: <Widget>[
                       AnimAppear(delay: 250, child: Text("PGN Login", style: TextStyle(color: Colors.white, fontSize: 40),),),
                       SizedBox(height: 10,),
-                      AnimAppear(delay: 400, child: Text("Welcome Back", style: TextStyle(color: Colors.white, fontSize: 18),)),
+                      AnimAppear(delay: 400, child: Text("Welcome Back!", style: TextStyle(color: Colors.white, fontSize: 18),)),
                     ],
                   ),
                   SizedBox(width: 30.0),
