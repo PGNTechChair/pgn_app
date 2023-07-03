@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pgn_app/Controllers/AnimationAppearController.dart';
+import 'package:pgn_app/Buttons/ambersubmitbutton.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -113,6 +114,15 @@ class _LoginState extends State<Login> {
                         ),
                       ),
                     )
+                ),
+              ),
+              SizedBox(height:50.0),
+              AnimAppear(
+                delay: 250,
+                child: AmberSubmitButton(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/home');
+                    },
                 ),
               ),
             ],
