@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:pgn_app/Controllers/AnimationAppearController.dart';
 import 'package:pgn_app/Buttons/ambersubmitbutton.dart';
@@ -27,7 +28,7 @@ class _LoginState extends State<Login> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            SizedBox(height: 80,),
+            SizedBox(height: 50,),
             Padding(
               padding: EdgeInsets.all(20),
               child: Row(
@@ -112,7 +113,36 @@ class _LoginState extends State<Login> {
                           ),
                         )),
                         SizedBox(height: 40,),
-                        AnimAppear(delay: 375, child: Text("New User? Sign Up!", style: TextStyle(color: Colors.grey),)),
+                        AnimAppear(
+                          delay: 375,
+                          child: Container(
+                            margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                            child: RichText(
+                              text: TextSpan(
+                                text: "New User? ",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  color: Colors.grey,
+                                ),
+                                children: <TextSpan> [
+                                  TextSpan(
+                                    text: "Sign Up!",
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                      color: Colors.grey,
+                                      decoration: TextDecoration.underline,
+                                      decorationThickness: 2.0,
+                                    ),
+                                    recognizer: TapGestureRecognizer()
+                                      ..onTap = () {
+                                        Navigator.pushNamed(context, '/signup');
+                                      }
+                                    ),
+                                  ]
+                              ),
+                            ),
+                          ),
+                        ),
                         SizedBox(height: 40,),
                         AnimAppear(delay: 375, child: Container(
                           height: 50,
