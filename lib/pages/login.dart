@@ -120,6 +120,7 @@ class _LoginState extends State<Login> {
               AnimAppear(
                 delay: 250,
                 child: AmberSubmitButton(
+                    message: "Login!",
                     onTap: () {
                       Navigator.pushNamed(context, '/home');
                     },

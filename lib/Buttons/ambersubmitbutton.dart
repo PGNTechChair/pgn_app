@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 class AmberSubmitButton extends StatelessWidget {
   final VoidCallback onTap;
+  final String message;
 
-  const AmberSubmitButton({required this.onTap});
+  const AmberSubmitButton({required this.onTap, required this.message});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +26,7 @@ class AmberSubmitButton extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            'Login!',
+            message,
             style: TextStyle(
               color: Colors.white,
               fontSize: 18.0,

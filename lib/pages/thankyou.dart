@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pgn_app/Buttons/ambersubmitbutton.dart';
 
 class ThankYou extends StatefulWidget {
   @override
@@ -34,22 +35,11 @@ class _ThankYouState extends State<ThankYou> {
               SizedBox(height: 80.0),
               Align(
                 alignment: Alignment.topCenter,
-                child: TextButton(
-                  onPressed: () {
+                child: AmberSubmitButton(
+                  message: "Return to Login.",
+                  onTap: () {
                     Navigator.pushNamed(context, '/login');
                   },
-                  style: ButtonStyle(
-                      foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                      backgroundColor: MaterialStateProperty.all<Color>(Colors.amber)
-                  ),
-                  child: Text(
-                    "Return to Login",
-                    style: TextStyle(
-                      fontSize: 20,
-                      letterSpacing: 2.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
                 ),
               )
             ],
