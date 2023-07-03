@@ -144,17 +144,17 @@ class _LoginState extends State<Login> {
                           ),
                         ),
                         SizedBox(height: 40,),
-                        AnimAppear(delay: 375, child: Container(
-                          height: 50,
-                          margin: EdgeInsets.symmetric(horizontal: 50),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(50),
-                              color: Colors.amberAccent[700],
+                        AnimAppear(delay: 375,
+                          child: Align(
+                          alignment: Alignment.center,
+                            child: AmberSubmitButton(
+                              message: "Login!",
+                              onTap: () {
+                                Navigator.pushNamed(context, '/home');
+                              },
+                            ),
                           ),
-                          child: Center(
-                            child: Text("Login", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
-                          ),
-                        )),
+                        ),
                         SizedBox(height: 50,),
                       ],
                     ),

@@ -14,7 +14,7 @@ class AmberSubmitButton extends StatelessWidget {
         width: 200.0,
         height: 50.0,
         decoration: BoxDecoration(
-          color: Colors.amber,
+          color: Colors.amberAccent[700],
           borderRadius: BorderRadius.circular(25.0),
           boxShadow: [
             BoxShadow(
