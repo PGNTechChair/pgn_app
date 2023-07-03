@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:pgn_app/Controllers/AnimationAppearController.dart';
 import 'package:pgn_app/Buttons/ambersubmitbutton.dart';
@@ -80,6 +81,36 @@ class _SignUpState extends State<SignUp> {
                           )
                       )
                   )
+              ),
+              AnimAppear(
+                delay: 250,
+                child: Container(
+                  margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                  child: RichText(
+                    text: TextSpan(
+                      text: "Already with us?\t",
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Colors.white,
+                      ),
+                      children: <TextSpan> [
+                        TextSpan(
+                            text: "Login Here!",
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.white,
+                              decoration: TextDecoration.underline,
+                              decorationThickness: 2.0,
+                          ),
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              Navigator.pushNamed(context, '/thankyou');
+                            }
+                        ),
+                      ]
+                    ),
+                  ),
+                ),
               ),
               AnimAppear(
                   delay: 250,
