@@ -7,7 +7,7 @@ import "package:pgn_app/pages/login.dart";
 void main() => runApp(MaterialApp(
     initialRoute: '/',
     routes: {
-      '/': (context) => SignUp(),
+      '/': (context) => Login(),
       '/home': (context) => Home(),
       '/signup': (context) => SignUp(),
       '/thankyou': (context) => ThankYou(),

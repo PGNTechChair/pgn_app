@@ -30,12 +30,30 @@ class _LoginState extends State<Login> {
             SizedBox(height: 80,),
             Padding(
               padding: EdgeInsets.all(20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  AnimAppear(delay: 250, child: Text("PGN Login", style: TextStyle(color: Colors.white, fontSize: 40),),),
-                  SizedBox(height: 10,),
-                  AnimAppear(delay: 400, child: Text("Welcome Back", style: TextStyle(color: Colors.white, fontSize: 18),)),
+              child: Row(
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      AnimAppear(delay: 250, child: Text("PGN Login", style: TextStyle(color: Colors.white, fontSize: 40),),),
+                      SizedBox(height: 10,),
+                      AnimAppear(delay: 400, child: Text("Welcome Back", style: TextStyle(color: Colors.white, fontSize: 18),)),
+                    ],
+                  ),
+                  SizedBox(width: 30.0),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      AnimAppear(
+                        delay: 500,
+                        child: Image(
+                          image: AssetImage('assets/sparty.png'),
+                          height: 150,
+                          width: 150,
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
@@ -71,7 +89,7 @@ class _LoginState extends State<Login> {
                                 ),
                                 child: TextField(
                                   decoration: InputDecoration(
-                                      hintText: "Email or Phone number",
+                                      hintText: "Email",
                                       hintStyle: TextStyle(color: Colors.grey),
                                       border: InputBorder.none
                                   ),
