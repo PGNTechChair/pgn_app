@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "523598588554",
+    "project_id": "pgn-app-d72a3",
+    "storage_bucket": "pgn-app-d72a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:523598588554:android:200b3fa64a1c7b5abe9b73",
+        "android_client_info": {
+          "package_name": "com.PGNMSU.pgn_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "523598588554-sknaeh1atk7u301abhipfluhl24p33ur.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANs9AdUV7YM1YwUGulnzekkkjy_MhAF1M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "523598588554-sknaeh1atk7u301abhipfluhl24p33ur.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

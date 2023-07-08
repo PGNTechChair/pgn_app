@@ -28,6 +28,9 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  cloud_firestore: ^4.8.2
+  firebase_auth: ^4.6.3
+  firebase_core: ^2.14.0
   flutter:
     sdk: flutter
 
@@ -41,6 +44,8 @@ dev_dependencies:
     sdk: flutter
 
   simple_animations: ^4.2.0
+  build_runner:
+  flutter_gen_runner:
 
 
   # The "flutter_lints" package below contains a set of recommended lints to

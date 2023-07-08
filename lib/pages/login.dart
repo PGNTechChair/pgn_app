@@ -28,7 +28,7 @@ class _LoginState extends State<Login> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            SizedBox(height: 50,),
+            SizedBox(height: 30,),
             Padding(
               padding: EdgeInsets.all(20),
               child: Row(
@@ -62,8 +62,21 @@ class _LoginState extends State<Login> {
             Expanded(
               child: Container(
                 decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.only(topLeft: Radius.circular(60), topRight: Radius.circular(60))
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(60),
+                    topRight: Radius.circular(60)
+                    ),
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Colors.transparent,
+                      Colors.white.withOpacity(.5),
+                      Colors.white
+                    ],
+                    stops: [0,.05,.1],
+                  ),
                 ),
                 child: SingleChildScrollView(
                   child: Padding(
