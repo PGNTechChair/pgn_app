@@ -3,11 +3,12 @@ import "package:pgn_app/pages/home.dart";
 import "package:pgn_app/pages/signup.dart";
 import "package:pgn_app/pages/thankyou.dart";
 import "package:pgn_app/pages/login.dart";
+import "package:pgn_app/pages/wrapper.dart";
 
 void main() => runApp(MaterialApp(
     initialRoute: '/',
     routes: {
-      '/': (context) => Login(),
+      '/': (context) => Wrapper(), //TODO: Fix back to what we want initially?
       '/home': (context) => Home(),
       '/signup': (context) => SignUp(),
       '/thankyou': (context) => ThankYou(),
