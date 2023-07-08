@@ -174,6 +174,20 @@ class _LoginState extends State<Login> {
                           ),
                         ),
                         SizedBox(height: 50,),
+                        ElevatedButton(onPressed: ()
+                        async {
+                          dynamic result = await _authService.signInAnon();
+                          if (result == null)
+                          {
+                            print("Error Signing in");
+                          }
+                          else
+                          {
+                            print("Signed in");
+                            print(result.uid);
+                          }
+                        },
+                            child: Text("Sign in"))
                       ],
                     ),
                   ),
