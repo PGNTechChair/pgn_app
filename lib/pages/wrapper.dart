@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import "package:pgn_app/pages/home.dart";
+import 'package:pgn_app/pages/login.dart';
 
 
 class Wrapper extends StatelessWidget {
@@ -7,6 +8,6 @@ class Wrapper extends StatelessWidget {
   Widget build(BuildContext context) {
 
     //Return either Home() or Authenticate Widget
-    return Home();
+    return Login();
   }
 }

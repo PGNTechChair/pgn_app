@@ -1,7 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:pgn_app/Controllers/AnimationAppearController.dart';
 import 'package:pgn_app/Buttons/ambersubmitbutton.dart';
+import 'package:pgn_app/services/auth.dart';
 
 
 class Login extends StatefulWidget {
@@ -10,6 +12,9 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+
+  final AuthService _authService = AuthService();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
