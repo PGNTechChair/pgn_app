@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pgn_app/Controllers/AnimationAppearController.dart';
 import 'package:pgn_app/Controllers/AnimationAppearController.dart';
+import 'package:pgn_app/services/auth.dart';
 // class Home extends StatefulWidget {
 //   @override
 //   _HomeState createState() => _HomeState();
@@ -21,21 +22,27 @@ import 'package:pgn_app/Controllers/AnimationAppearController.dart';
 //   }
 // }
 class Home extends StatelessWidget {
+
+  final AuthService _auth = AuthService();
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.brown[50],
       appBar: AppBar(
-        title: Text('Prevent Text Overflow Example'),
-      ),
-      body: Container(
-        padding: EdgeInsets.all(16.0),
-        child: OverflowBox(
-          maxWidth: double.infinity,
-          child: Text(
-            'Long Text That Should Not Overflow to the Right of the Screen',
-            style: TextStyle(fontSize: 18.0),
-          ),
-        ),
+        title: Text("Home Screen"),
+        backgroundColor: Colors.brown[400],
+        elevation: 0.0,
+        actions: <Widget>[
+          ElevatedButton.icon(
+            icon: Icon(Icons.person),
+            onPressed: () async {
+              await _auth.signOut();
+            },
+            label: Text("Log Out"),
+          )
+        ],
       ),
     );
   }
