@@ -8,6 +8,7 @@ import "package:pgn_app/pages/login.dart";
 import "package:pgn_app/pages/wrapper.dart";
 import "package:pgn_app/services/auth.dart";
 import "package:provider/provider.dart";
+import "package:pgn_app/authenticator/authentication.dart";
 
 
 void main() async {
@@ -23,9 +24,9 @@ void main() async {
         routes: {
           '/': (context) => Wrapper(),
           '/home': (context) => Home(),
-          '/signup': (context) => SignUp(),
+          '/signup': (context) => SignUp(toggleView: () {}),
           '/thankyou': (context) => ThankYou(),
-          '/login': (context) => Login(),
+          '/login': (context) => Login(toggleView: () {}),
         },
       ),
     ),
