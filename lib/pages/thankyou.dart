@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pgn_app/Buttons/ambersubmitbutton.dart';
+import 'package:pgn_app/shared/ambersubmitbutton.dart';
 
 class ThankYou extends StatefulWidget {
   @override

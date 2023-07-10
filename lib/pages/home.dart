@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pgn_app/Controllers/AnimationAppearController.dart';
-import 'package:pgn_app/Controllers/AnimationAppearController.dart';
+import 'package:pgn_app/controllers/AnimationAppearController.dart';
 import 'package:pgn_app/services/auth.dart';
 // class Home extends StatefulWidget {
 //   @override

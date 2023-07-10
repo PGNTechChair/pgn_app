@@ -1,8 +1,8 @@
 import 'dart:ui';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:pgn_app/Controllers/AnimationAppearController.dart';
-import 'package:pgn_app/Buttons/ambersubmitbutton.dart';
+import 'package:pgn_app/controllers/AnimationAppearController.dart';
+import 'package:pgn_app/shared/ambersubmitbutton.dart';
 import 'package:pgn_app/services/auth.dart';
 
 class SignUp extends StatefulWidget {
