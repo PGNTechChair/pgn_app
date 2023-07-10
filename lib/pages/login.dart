@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:pgn_app/controllers/AnimationAppearController.dart';
 import 'package:pgn_app/shared/ambersubmitbutton.dart';
 import 'package:pgn_app/services/auth.dart';
+import 'package:pgn_app/shared/loading.dart';
 
 
 class Login extends StatefulWidget {
@@ -20,6 +21,7 @@ class _LoginState extends State<Login> {
 
   final AuthService _authService = AuthService();
   final _formKey = GlobalKey<FormState>();
+  bool loading = false;
 
 
   // text field state
@@ -30,7 +32,7 @@ class _LoginState extends State<Login> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return loading ? Loading() : Scaffold(
       body: Container(
         width: double.infinity,
         decoration: BoxDecoration(
@@ -207,18 +209,20 @@ class _LoginState extends State<Login> {
                                 message: "Login!",
                                 onTap: () async
                                 {
-                                  if (_formKey.currentState!.validate())
-                                  {
-                                    dynamic result = await _authService.signInWithEmailAndPassword(email, password);
+                                  if (_formKey.currentState!.validate()) {
+                                    setState(() => loading = true);
+                                    dynamic result = await _authService
+                                        .signInWithEmailAndPassword(
+                                        email, password);
                                     print(result);
-                                    if (result == null)
-                                    {
-
-                                      setState(() => error = "Could not sign in with invalid credentials.");
+                                    if (result == null) {
+                                        setState(() {
+                                            error = "Could not sign in with invalid credentials.";
+                                            loading = false;
+                                        });
                                     }
-
                                   }
-                                },
+                                }
                               ),
                             ),
                           ),

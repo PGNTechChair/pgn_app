@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:pgn_app/controllers/AnimationAppearController.dart';
 import 'package:pgn_app/shared/ambersubmitbutton.dart';
 import 'package:pgn_app/services/auth.dart';
+import 'package:pgn_app/shared/loading.dart';
 
 class SignUp extends StatefulWidget {
 
@@ -20,6 +21,7 @@ class _SignUpState extends State<SignUp> {
 
   final AuthService _authService = AuthService();
   final _formKey = GlobalKey<FormState>();
+  bool loading = false;
 
   // text field state
   String email = '';
@@ -28,7 +30,7 @@ class _SignUpState extends State<SignUp> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return loading ? Loading() : Scaffold(
       backgroundColor: Colors.transparent,
       body: Container(
         decoration: BoxDecoration(
@@ -402,16 +404,17 @@ class _SignUpState extends State<SignUp> {
                       child: AmberSubmitButton(
                         message: "Sign Up!",
                         onTap: () async {
-                          if (_formKey.currentState!.validate())
-                          {
-                              dynamic result = await _authService.registerWithEmailAndPassword(email, password);
+                          if (_formKey.currentState!.validate()) {
+                            setState(() => loading = true);
+                            dynamic result = await _authService.registerWithEmailAndPassword(email, password);
 
-                              if (result == null)
-                              {
-                                setState(() => error = "Please Supply a Valid Email");
-                              }
-
+                            if (result == null) {
+                              setState(() {
+                                error = "Please Supply a Valid Email";
+                                loading = false;
+                              });
                               // Navigator.pushNamed(context, '/thankyou');
+                            }
                           }
                         },
                       ),

@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:pgn_app/models/user.dart';
+import 'package:pgn_app/services/database.dart';
 
 
 class AuthService
@@ -70,7 +71,13 @@ class AuthService
           password: password
       );
 
+
+
+
       User? user = result.user;
+
+      //create a new document for the user with the uid
+      await DatabaseService(uid: user!.uid).updateUserData('Business','Sophomore','Suzi','Builder');
 
       return _userFromFirebaseUser(user);
 
