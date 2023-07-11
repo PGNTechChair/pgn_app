@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:pgn_app/models/member.dart';
 
 class DatabaseService
 {
@@ -17,6 +18,27 @@ class DatabaseService
         'firstName':firstName,
         'lastName':lastName,
     });
+  }
+
+  //pgn member list from snapshot
+  List<Member> _memberListFromSnapshot(QuerySnapshot snapshot)
+  {
+    return snapshot.docs.map((doc){
+      return Member(
+        major: doc.get("major").toString() ?? '',
+        year: doc.get("year").toString() ?? '',
+        firstName: doc.get("firstName").toString() ?? '',
+        lastName: doc.get("lastName").toString() ?? ''
+      );
+    }).toList();
+  }
+
+
+  //get pgn stream
+  Stream<List<Member>> get pgnSnapshots
+  {
+    return pgnCollection.snapshots()
+    .map(_memberListFromSnapshot);
   }
 
 
