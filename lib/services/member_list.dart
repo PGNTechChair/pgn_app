@@ -25,9 +25,6 @@ class _MemberListState extends State<MemberList> {
     //   });
     // }
 
-
-
-
     return ListView.builder(
       itemCount: memberInfo.length,
       itemBuilder: (context, index) {
