@@ -16,6 +16,7 @@ void main() async {
   await Firebase.initializeApp();
 
   runApp(
+
     StreamProvider<NewUser?>.value(
       value: AuthService().user,
       initialData: null,

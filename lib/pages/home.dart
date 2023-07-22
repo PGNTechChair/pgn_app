@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pgn_app/controllers/AnimationAppearController.dart';
 import 'package:pgn_app/models/member.dart';
+import 'package:pgn_app/pages/settings_form.dart';
 import 'package:pgn_app/services/auth.dart';
 import 'package:pgn_app/services/database.dart';
 import 'package:provider/provider.dart';
@@ -22,7 +23,7 @@ class Home extends StatelessWidget {
           {
             return Container(
               padding: EdgeInsets.symmetric(vertical: 20.0,horizontal: 60.0),
-              child: Text("Bottom Sheet"),
+              child: SettingsForm(),
             );
           }
       );
