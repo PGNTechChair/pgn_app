@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:pgn_app/controllers/AnimationAppearController.dart';
 import 'package:pgn_app/shared/ambersubmitbutton.dart';
 import 'package:pgn_app/services/auth.dart';
 import 'package:pgn_app/shared/loading.dart';
@@ -23,12 +22,10 @@ class _LoginState extends State<Login> {
   final _formKey = GlobalKey<FormState>();
   bool loading = false;
 
-
   // text field state
   String email = '';
   String password = '';
   String error = '';
-
 
   @override
   Widget build(BuildContext context) {
@@ -56,22 +53,19 @@ class _LoginState extends State<Login> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      AnimAppear(delay: 250, child: Text("PGN Login", style: TextStyle(color: Colors.white, fontSize: 40),),),
+                      Text("PGN Login", style: TextStyle(color: Colors.white, fontSize: 40),),
                       SizedBox(height: 10,),
-                      AnimAppear(delay: 400, child: Text("Welcome Back!", style: TextStyle(color: Colors.white, fontSize: 18),)),
+                      Text("Welcome Back!", style: TextStyle(color: Colors.white, fontSize: 18),),
                     ],
                   ),
                   SizedBox(width: 30.0),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      AnimAppear(
-                        delay: 500,
-                        child: Image(
-                          image: AssetImage('assets/sparty.png'),
-                          height: 150,
-                          width: 150,
-                        ),
+                      Image(
+                        image: AssetImage('assets/sparty.png'),
+                        height: 150,
+                        width: 150,
                       ),
                     ],
                   ),
@@ -87,16 +81,6 @@ class _LoginState extends State<Login> {
                     topLeft: Radius.circular(60),
                     topRight: Radius.circular(60)
                     ),
-                  gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      Colors.transparent,
-                      Colors.white.withOpacity(.5),
-                      Colors.white
-                    ],
-                    stops: [0,.05,.1],
-                  ),
                 ),
                 child: SingleChildScrollView(
                   child: Padding(
@@ -106,7 +90,7 @@ class _LoginState extends State<Login> {
                       child: Column(
                         children: <Widget>[
                           SizedBox(height: 60,),
-                          AnimAppear(delay: 400, child: Container(
+                          Container(
                             decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(10),
@@ -168,62 +152,56 @@ class _LoginState extends State<Login> {
                                 ),
                               ],
                             ),
-                          )),
+                          ),
                           SizedBox(height: 40,),
-                          AnimAppear(
-                            delay: 375,
-                            child: Container(
-                              margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                              child: RichText(
-                                text: TextSpan(
-                                  text: "New User? ",
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                    color: Colors.grey,
-                                  ),
-                                  children: <TextSpan> [
-                                    TextSpan(
-                                      text: "Sign Up!",
-                                      style: TextStyle(
-                                        fontSize: 15,
-                                        color: Colors.grey,
-                                        decoration: TextDecoration.underline,
-                                        decorationThickness: 2.0,
-                                      ),
-                                      recognizer: TapGestureRecognizer()
-                                        ..onTap = () {
-                                          widget.toggleView();
-                                          // Navigator.pushNamed(context, '/signup');
-                                        }
-                                      ),
-                                    ]
+                          Container(
+                            margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                            child: RichText(
+                              text: TextSpan(
+                                text: "New User? ",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  color: Colors.grey,
                                 ),
+                                children: <TextSpan> [
+                                  TextSpan(
+                                    text: "Sign Up!",
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                      color: Colors.grey,
+                                      decoration: TextDecoration.underline,
+                                      decorationThickness: 2.0,
+                                    ),
+                                    recognizer: TapGestureRecognizer()
+                                      ..onTap = () {
+                                        widget.toggleView();
+                                        // Navigator.pushNamed(context, '/signup');
+                                      }
+                                    ),
+                                  ]
                               ),
                             ),
                           ),
                           SizedBox(height: 40,),
-                          AnimAppear(delay: 375,
-                            child: Align(
-                            alignment: Alignment.center,
-                              child: AmberSubmitButton(
-                                message: "Login!",
-                                onTap: () async
-                                {
-                                  if (_formKey.currentState!.validate()) {
-                                    setState(() => loading = true);
-                                    dynamic result = await _authService
-                                        .signInWithEmailAndPassword(
-                                        email, password);
-                                    print(result);
-                                    if (result == null) {
-                                        setState(() {
-                                            error = "Could not sign in with invalid credentials.";
-                                            loading = false;
-                                        });
-                                    }
+                          Align(
+                          alignment: Alignment.center,
+                            child: AmberSubmitButton(
+                              message: "Login!",
+                              onTap: () async
+                              {
+                                if (_formKey.currentState!.validate()) {
+                                  setState(() => loading = true);
+                                  dynamic result = await _authService
+                                      .signInWithEmailAndPassword(
+                                      email, password);
+                                  if (result == null) {
+                                      setState(() {
+                                          error = "Could not sign in with invalid credentials.";
+                                          loading = false;
+                                      });
                                   }
                                 }
-                              ),
+                              }
                             ),
                           ),
                           SizedBox(height: 15.0),
