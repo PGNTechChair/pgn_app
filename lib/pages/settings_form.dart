@@ -48,8 +48,12 @@ class _SettingsFormState extends State<SettingsForm> {
                       initialValue: userData?.firstName,
                       decoration: textInputDecoration,
                       validator: (val) => val!.isEmpty ? "Please enter your first name" : null,
-                      onChanged: (val) => setState(() => _currentFirstName = val)
+                      //onChanged: (val) => setState(() => _currentFirstName = val),
+                      onChanged: (val) {
+                            setState(() => _currentFirstName = val);
+                      }
                   ),
+
                   SizedBox(height: 20.0),
                   TextFormField(
                       initialValue: userData?.lastName,
@@ -67,7 +71,7 @@ class _SettingsFormState extends State<SettingsForm> {
                   SizedBox(height: 20.0),
                   //dropdown
                   DropdownButtonFormField(
-                    value: _currentYear ?? userData?.year,
+                    value: userData?.year,
                     decoration: textInputDecoration,
                     items: years.map((year) {
                       return DropdownMenuItem(
@@ -81,6 +85,29 @@ class _SettingsFormState extends State<SettingsForm> {
                   ElevatedButton(
                     onPressed: () async
                     {
+                      var major = _currentMajor ?? userData!.major;
+                      var year = _currentYear ?? userData!.year;
+                      var firstName = _currentFirstName ?? userData!.firstName;
+                      var lastName = _currentLastName ?? userData!.lastName;
+
+                      //TODO - Temporary fix, this needs to update correctly through the stream
+                      if (_currentMajor == "")
+                      {
+                          _currentMajor = null;
+                      }
+                      if (_currentYear == "Other" && _currentYear == userData!.year)
+                      {
+                        _currentYear = null;
+                      }
+                      if (_currentFirstName == "")
+                      {
+                        _currentFirstName = null;
+                      }
+                      if (_currentLastName == "")
+                      {
+                        _currentLastName = null;
+                      }
+
                       if(_formKey.currentState!.validate())
                       {
                         await DatabaseService(uid: user.uid).updateUserData(
@@ -89,7 +116,7 @@ class _SettingsFormState extends State<SettingsForm> {
                             _currentFirstName ?? userData!.firstName,
                             _currentLastName ?? userData!.lastName
                         );
-                        Navigator.pop(context);
+                        if (mounted) Navigator.pop(context);
                       }
                     },
                     child: Text(
