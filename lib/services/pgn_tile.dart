@@ -1,9 +1,11 @@
 import "package:pgn_app/models/member.dart";
 import 'package:flutter/material.dart';
 
+import '../models/user.dart';
+
 class PgnTile extends StatelessWidget {
 
-  final Member? member;
+  final UserData? member;
   PgnTile({required this.member});
 
   @override

@@ -47,8 +47,7 @@ class DatabaseService
     );
   }
 
-
-  //get pgn stream
+  //get pgn-member stream
   Stream<List<Member>> get pgnSnapshots
   {
     return pgnCollection.snapshots()
@@ -61,7 +60,4 @@ class DatabaseService
     return pgnCollection.doc(uid).snapshots()
     .map(_userDataFromSnapshot);
   }
-
-
-
 }
