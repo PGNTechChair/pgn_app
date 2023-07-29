@@ -109,9 +109,14 @@ class _LoginState extends State<Login> {
                                   ),
                                   child: TextFormField(
                                     validator: (String? val) {
-                                      if (val != null && val.isEmpty)
+                                      if (val == null || val.isEmpty)
                                       {
                                         return "Please Enter an Email";
+                                      }
+
+                                      final emailRegExp = RegExp(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$');
+                                      if (!emailRegExp.hasMatch(val)) {
+                                        return 'Please enter an email address.';
                                       }
                                       return null;
                                     },
@@ -132,10 +137,11 @@ class _LoginState extends State<Login> {
                                       border: Border(bottom: BorderSide(color: Colors.grey))
                                   ),
                                   child: TextFormField(
+                                    obscureText: true,
                                     validator: (String? val) {
                                       if (val != null && val.length < 6)
                                       {
-                                        return "Please Enter a Valid Password.";
+                                        return "Please Enter a Password with 6+ characters.";
                                       }
                                       return null;
                                     },
