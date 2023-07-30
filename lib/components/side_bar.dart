@@ -41,17 +41,7 @@ class SideBar extends StatelessWidget {
                 child: SafeArea(
                   child: Column(
                     children: [
-                      ListTile(
-                        leading: CircleAvatar(
-                            backgroundColor: Colors.amber[800],
-                            child: Icon(Icons.person, color: Colors.white)
-                        ),
-                        title: Text(userData.firstName, style: TextStyle(color: Colors.white)),
-                        //TODO - Add field in registration that tells if user is member or not
-                        subtitle: Text("Placeholder for user status.", style: TextStyle(color: Colors.white)),
-                      ),
-
-
+                      InfoCard(cardInfo: userData.firstName),
                     ],
                   ),
                 ),
@@ -63,3 +53,23 @@ class SideBar extends StatelessWidget {
     );
   }
 }
+
+class InfoCard extends StatelessWidget {
+  final String cardInfo;
+
+  const InfoCard({required this.cardInfo});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: CircleAvatar(
+          backgroundColor: Colors.amber[800],
+          child: Icon(Icons.person, color: Colors.white)
+      ),
+      title: Text(cardInfo, style: TextStyle(color: Colors.white)),
+      //TODO - Add field in registration that tells if user is member or not
+      subtitle: Text("Placeholder for user status.", style: TextStyle(color: Colors.white)),
+    );
+  }
+}
+
