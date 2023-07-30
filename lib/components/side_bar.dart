@@ -42,10 +42,16 @@ class SideBar extends StatelessWidget {
                   child: Column(
                     children: [
                       ListTile(
-                          leading: CircleAvatar(
-                              backgroundColor: Colors.amber[800],
-                              child: Icon(Icons.person, color: Colors.white)),
-                          title: Text(userData.firstName))
+                        leading: CircleAvatar(
+                            backgroundColor: Colors.amber[800],
+                            child: Icon(Icons.person, color: Colors.white)
+                        ),
+                        title: Text(userData.firstName, style: TextStyle(color: Colors.white)),
+                        //TODO - Add field in registration that tells if user is member or not
+                        subtitle: Text("Placeholder for user status.", style: TextStyle(color: Colors.white)),
+                      ),
+
+
                     ],
                   ),
                 ),
