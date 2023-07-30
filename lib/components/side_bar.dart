@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:pgn_app/models/user.dart';
 import 'package:pgn_app/shared/loading.dart';
 import 'package:provider/provider.dart';
+import 'package:pgn_app/services/info_card.dart';
+import 'package:rive/rive.dart' as rive;
+import "package:pgn_app/services/side_menu_tile.dart";
 
 class SideBar extends StatelessWidget {
   @override
@@ -37,11 +40,23 @@ class SideBar extends StatelessWidget {
                       colors: [Color(0xFF8B0000), Color(0xFFB71C1C)],
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
-                    )),
+                    ),
+                ),
                 child: SafeArea(
                   child: Column(
                     children: [
-                      InfoCard(cardInfo: userData.firstName),
+                      InfoCard(name: userData.firstName, userStatus: "Placeholder for user status."),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 32.0, bottom: 16.0),
+                        child: Text(
+                            "Browse".toUpperCase(),
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.white,
+                            )
+                        ),
+                      ),
+                      SideMenuTile(),
                     ],
                   ),
                 ),
@@ -50,25 +65,6 @@ class SideBar extends StatelessWidget {
           );
         }
       },
-    );
-  }
-}
-
-class InfoCard extends StatelessWidget {
-  final String cardInfo;
-
-  const InfoCard({required this.cardInfo});
-
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      leading: CircleAvatar(
-          backgroundColor: Colors.amber[800],
-          child: Icon(Icons.person, color: Colors.white)
-      ),
-      title: Text(cardInfo, style: TextStyle(color: Colors.white)),
-      //TODO - Add field in registration that tells if user is member or not
-      subtitle: Text("Placeholder for user status.", style: TextStyle(color: Colors.white)),
     );
   }
 }
