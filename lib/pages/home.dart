@@ -71,7 +71,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         body: Stack(
           children: [
             Center(
-              child: Text('Your Main Content'),
+              child: Text('Home'),
             ),
             if (isSidebarOpen)
               GestureDetector(
