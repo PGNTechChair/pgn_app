@@ -129,7 +129,6 @@ class _SignUpState extends State<SignUp> {
                             recognizer: TapGestureRecognizer()
                               ..onTap = () {
                                 widget.toggleView();
-                                // Navigator.pushNamed(context, '/login');
                               }
                           ),
                         ]
