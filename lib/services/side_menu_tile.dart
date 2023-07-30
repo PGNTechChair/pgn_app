@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pgn_app/pages/settings.dart';
 import 'package:pgn_app/services/auth.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -66,6 +67,35 @@ class SideMenuTile extends StatelessWidget {
               style: TextStyle(color: Colors.white),
             ),
             onTap: _launchPgnWebsite,
+          ),
+        ],
+      );
+    }
+
+
+    else if (sideMenuOption == "Settings")
+    {
+      return Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal:18.0),
+            child: Divider(
+              color: Colors.white24,
+              thickness: 1 ,
+            ),
+          ),
+          ListTile(
+            leading: iconName,
+            title: Text(
+              sideMenuOption,
+              style: TextStyle(color: Colors.white),
+            ),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Settings()),
+              );
+            },
           ),
         ],
       );

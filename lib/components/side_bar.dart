@@ -44,40 +44,42 @@ class SideBar extends StatelessWidget {
                         ),
                     ),
                     child: SafeArea(
-                      child: Column(
-                        children: [
-                          InfoCard(name: userData.firstName, userStatus: userData.major),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 32.0, bottom: 16.0),
-                            child: Text(
-                                "Browse".toUpperCase(),
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  color: Colors.white,
-                                )
+                      child: SingleChildScrollView(
+                        child: Column(
+                          children: [
+                            InfoCard(name: userData.firstName, userStatus: userData.major),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 32.0, bottom: 16.0),
+                              child: Text(
+                                  "Browse".toUpperCase(),
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  )
+                              ),
                             ),
-                          ),
-                          SideMenuTile(
-                            iconName: Icon(Icons.settings, color: Colors.white),
-                            sideMenuOption: "Settings",
-                          ),
-                          SideMenuTile(
-                            iconName: Icon(Icons.web_sharp, color: Colors.white),
-                            sideMenuOption: "PGN Website",
-                          ),
-                          SideMenuTile(
-                            iconName: Icon(Icons.calendar_month_outlined, color: Colors.white),
-                            sideMenuOption: "Calendar (Coming Soon)",
-                          ),
-                          SideMenuTile(
-                            iconName: Icon(Icons.monetization_on, color: Colors.white),
-                            sideMenuOption: "Pay Dues - Omella",
-                          ),
-                          SideMenuTile(
-                            iconName: Icon(Icons.exit_to_app, color: Colors.white),
-                            sideMenuOption: "Sign Out",
-                          ),
-                        ],
+                            SideMenuTile(
+                              iconName: Icon(Icons.settings, color: Colors.white),
+                              sideMenuOption: "Settings",
+                            ),
+                            SideMenuTile(
+                              iconName: Icon(Icons.web_sharp, color: Colors.white),
+                              sideMenuOption: "PGN Website",
+                            ),
+                            SideMenuTile(
+                              iconName: Icon(Icons.calendar_month_outlined, color: Colors.white),
+                              sideMenuOption: "Calendar (Coming Soon)",
+                            ),
+                            SideMenuTile(
+                              iconName: Icon(Icons.monetization_on, color: Colors.white),
+                              sideMenuOption: "Pay Dues - Omella",
+                            ),
+                            SideMenuTile(
+                              iconName: Icon(Icons.exit_to_app, color: Colors.white),
+                              sideMenuOption: "Sign Out",
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
