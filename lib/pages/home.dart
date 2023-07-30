@@ -11,15 +11,47 @@ class Home extends StatefulWidget {
   _HomeState createState() => _HomeState();
 }
 
-class _HomeState extends State<Home> {
-  final AuthService _auth = AuthService();
+class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
+
   bool isSidebarOpen = false;
+
+  late AnimationController _animationController;
+  late Animation<Offset> _slideAnimation;
+
+  @override
+  void initState() {
+    super.initState();
+    _animationController = AnimationController(
+      vsync: this,
+      duration: Duration(milliseconds: 750),
+    );
+
+    _slideAnimation = Tween<Offset>(
+      begin: Offset(-1, 0),
+      end: Offset.zero,
+    ).animate(CurvedAnimation(
+      parent: _animationController,
+      curve: Curves.easeOut,
+    ));
+  }
 
   void toggleSidebar() {
     setState(() {
       isSidebarOpen = !isSidebarOpen;
+      if (isSidebarOpen) {
+        _animationController.forward();
+      } else {
+        _animationController.reverse();
+      }
     });
   }
+
+  @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -35,17 +67,23 @@ class _HomeState extends State<Home> {
           child: Icon(Icons.menu),
           onPressed: toggleSidebar,
         ),
-        // Position the FloatingActionButton in the top-left corner
         floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
-        // Add the Sidebar widget inside a Stack to overlay it when it's open
         body: Stack(
           children: [
-            // Main content of the page goes here
-            // You can replace SideBar() with your main content widget
             Center(
               child: Text('Your Main Content'),
             ),
-            if (isSidebarOpen) SideBar(),
+            if (isSidebarOpen)
+              GestureDetector(
+                onTap: toggleSidebar,
+                child: Container(
+                  color: Colors.black.withOpacity(0.5),
+                ),
+              ),
+              SlideTransition(
+                position: _slideAnimation,
+                child: SideBar(),
+              ),
           ],
         ),
       ),

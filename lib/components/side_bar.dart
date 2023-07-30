@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pgn_app/models/user.dart';
+import 'package:pgn_app/pages/home.dart';
 import 'package:pgn_app/shared/loading.dart';
 import 'package:provider/provider.dart';
 import 'package:pgn_app/services/info_card.dart';
@@ -16,10 +17,7 @@ class SideBar extends StatelessWidget {
     return FutureBuilder<UserData?>(
       future: Future.value(userData), // Convert UserData? to Future<UserData?>
       builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          // While waiting for data, you can show a loading indicator
-          return Loading();
-        } else if (snapshot.hasError) {
+        if (snapshot.hasError) {
           // If there's an error in fetching data, you can handle it here
           return Text('Error: ${snapshot.error}');
         } else {
@@ -31,54 +29,56 @@ class SideBar extends StatelessWidget {
             return Text('No user data available.');
           }
 
-          return Scaffold(
-            body: SafeArea(
-              child: Drawer(
-                child: Container(
-                  width: 250,
-                  height: double.infinity,
-                  decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [Color(0xFF8B0000), Color(0xFFB71C1C)],
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                      ),
-                  ),
-                  child: SafeArea(
-                    child: Column(
-                      children: [
-                        InfoCard(name: userData.firstName, userStatus: "Placeholder for user status."),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 32.0, bottom: 16.0),
-                          child: Text(
-                              "Browse".toUpperCase(),
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Colors.white,
-                              )
+          return Drawer(
+            child: Scaffold(
+              body: SafeArea(
+                child: Drawer(
+                  child: Container(
+                    width: 250,
+                    height: double.infinity,
+                    decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [Color(0xFF8B0000), Color(0xFFB71C1C)],
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                        ),
+                    ),
+                    child: SafeArea(
+                      child: Column(
+                        children: [
+                          InfoCard(name: userData.firstName, userStatus: "Placeholder for user status."),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 32.0, bottom: 16.0),
+                            child: Text(
+                                "Browse".toUpperCase(),
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  color: Colors.white,
+                                )
+                            ),
                           ),
-                        ),
-                        SideMenuTile(
-                          iconName: Icon(Icons.settings, color: Colors.white),
-                          sideMenuOption: "Settings",
-                        ),
-                        SideMenuTile(
-                          iconName: Icon(Icons.web_sharp, color: Colors.white),
-                          sideMenuOption: "PGN Website",
-                        ),
-                        SideMenuTile(
-                          iconName: Icon(Icons.calendar_month_outlined, color: Colors.white),
-                          sideMenuOption: "Calendar (Coming Soon)",
-                        ),
-                        SideMenuTile(
-                          iconName: Icon(Icons.monetization_on, color: Colors.white),
-                          sideMenuOption: "Pay Dues (Coming Soon)",
-                        ),
-                        SideMenuTile(
-                          iconName: Icon(Icons.exit_to_app, color: Colors.white),
-                          sideMenuOption: "Sign Out",
-                        ),
-                      ],
+                          SideMenuTile(
+                            iconName: Icon(Icons.settings, color: Colors.white),
+                            sideMenuOption: "Settings",
+                          ),
+                          SideMenuTile(
+                            iconName: Icon(Icons.web_sharp, color: Colors.white),
+                            sideMenuOption: "PGN Website",
+                          ),
+                          SideMenuTile(
+                            iconName: Icon(Icons.calendar_month_outlined, color: Colors.white),
+                            sideMenuOption: "Calendar (Coming Soon)",
+                          ),
+                          SideMenuTile(
+                            iconName: Icon(Icons.monetization_on, color: Colors.white),
+                            sideMenuOption: "Pay Dues (Coming Soon)",
+                          ),
+                          SideMenuTile(
+                            iconName: Icon(Icons.exit_to_app, color: Colors.white),
+                            sideMenuOption: "Sign Out",
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
