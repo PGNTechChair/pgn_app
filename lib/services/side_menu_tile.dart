@@ -2,7 +2,11 @@
 import 'package:flutter/material.dart';
 
 class SideMenuTile extends StatelessWidget {
-  const SideMenuTile({super.key});
+
+  final Icon iconName;
+  final String sideMenuOption;
+
+  const SideMenuTile({required this.iconName, required this.sideMenuOption});
 
   @override
   Widget build(BuildContext context) {
@@ -16,9 +20,9 @@ class SideMenuTile extends StatelessWidget {
           ),
         ),
         ListTile(
-            leading: Icon(Icons.settings, color: Colors.white),
+            leading: iconName,
             title: Text(
-                "Settings",
+                sideMenuOption,
                 style: TextStyle(color: Colors.white)
             )
         ),

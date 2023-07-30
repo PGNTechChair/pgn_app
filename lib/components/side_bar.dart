@@ -56,7 +56,26 @@ class SideBar extends StatelessWidget {
                             )
                         ),
                       ),
-                      SideMenuTile(),
+                      SideMenuTile(
+                        iconName: Icon(Icons.settings, color: Colors.white),
+                        sideMenuOption: "Settings",
+                      ),
+                      SideMenuTile(
+                        iconName: Icon(Icons.web_sharp, color: Colors.white),
+                        sideMenuOption: "PGN Website",
+                      ),
+                      SideMenuTile(
+                        iconName: Icon(Icons.calendar_month_outlined, color: Colors.white),
+                        sideMenuOption: "Calendar (Coming Soon)",
+                      ),
+                      SideMenuTile(
+                        iconName: Icon(Icons.monetization_on, color: Colors.white),
+                        sideMenuOption: "Pay Dues (Coming Soon)",
+                      ),
+                      SideMenuTile(
+                        iconName: Icon(Icons.exit_to_app, color: Colors.white),
+                        sideMenuOption: "Sign Out",
+                      ),
                     ],
                   ),
                 ),
