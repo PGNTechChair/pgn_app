@@ -5,7 +5,6 @@ import 'package:pgn_app/shared/ambersubmitbutton.dart';
 import 'package:pgn_app/services/auth.dart';
 import 'package:pgn_app/shared/loading.dart';
 
-
 class Login extends StatefulWidget {
 
   late final Function toggleView;

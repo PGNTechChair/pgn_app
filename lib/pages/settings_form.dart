@@ -85,10 +85,6 @@ class _SettingsFormState extends State<SettingsForm> {
                   ElevatedButton(
                     onPressed: () async
                     {
-                      var major = _currentMajor ?? userData!.major;
-                      var year = _currentYear ?? userData!.year;
-                      var firstName = _currentFirstName ?? userData!.firstName;
-                      var lastName = _currentLastName ?? userData!.lastName;
 
                       //TODO - Temporary fix, this needs to update correctly through the stream
                       if (_currentMajor == "")
