@@ -46,7 +46,7 @@ class SideBar extends StatelessWidget {
                     child: SafeArea(
                       child: Column(
                         children: [
-                          InfoCard(name: userData.firstName, userStatus: "Placeholder for user status."),
+                          InfoCard(name: userData.firstName, userStatus: userData.major),
                           Padding(
                             padding: const EdgeInsets.only(top: 32.0, bottom: 16.0),
                             child: Text(
@@ -71,7 +71,7 @@ class SideBar extends StatelessWidget {
                           ),
                           SideMenuTile(
                             iconName: Icon(Icons.monetization_on, color: Colors.white),
-                            sideMenuOption: "Pay Dues (Coming Soon)",
+                            sideMenuOption: "Pay Dues - Omella",
                           ),
                           SideMenuTile(
                             iconName: Icon(Icons.exit_to_app, color: Colors.white),
