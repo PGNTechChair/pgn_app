@@ -52,7 +52,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
     super.dispose();
   }
 
-
   @override
   Widget build(BuildContext context) {
     String? uid = Provider.of<NewUser?>(context)?.uid;
