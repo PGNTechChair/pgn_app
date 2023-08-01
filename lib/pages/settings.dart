@@ -39,7 +39,7 @@ class _SettingsState extends State<Settings> {
               backgroundColor: Colors.grey[300],
               appBar: AppBar(
                 title: Text(
-                  "Update PGN Settings",
+                  "Settings",
                   style: TextStyle(fontSize: 18.0),
                 ),
                 backgroundColor: Color(0xFF8B0000),
@@ -186,7 +186,10 @@ class CardWithLabel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 2,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10),
+      ),
+      elevation: 5,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Row(
