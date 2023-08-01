@@ -384,7 +384,6 @@ class _SignUpState extends State<SignUp> {
                               error = "Please Supply a Proper Email";
                               loading = false;
                             });
-                            // Navigator.pushNamed(context, '/thankyou');
                           }
                         }
                       },

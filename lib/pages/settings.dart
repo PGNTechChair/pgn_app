@@ -6,7 +6,6 @@ import "package:pgn_app/shared/constants.dart";
 import "package:pgn_app/shared/loading.dart";
 import "package:provider/provider.dart";
 
-
 class Settings extends StatefulWidget {
   const Settings({super.key});
 
@@ -37,20 +36,20 @@ class _SettingsState extends State<Settings> {
           {
             UserData? userData = snapshot.data;
             return Scaffold(
+              appBar: AppBar(
+                title: Text(
+                  "Update PGN Settings",
+                  style: TextStyle(fontSize: 18.0),
+                ),
+                backgroundColor: Color(0xFF8B0000),
+                centerTitle: true,
+              ),
               body: SingleChildScrollView(
                 child: Form(
                   key: _formKey,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      AppBar(
-                        title: Text(
-                          "Update PGN Settings",
-                          style: TextStyle(fontSize: 18.0),
-                        ),
-                        backgroundColor: Color(0xFF8B0000),
-                        centerTitle: true,
-                      ),
                       SizedBox(height: 30),
                       Container(
                           margin: EdgeInsets.fromLTRB(10, 20, 10, 0),
@@ -74,14 +73,14 @@ class _SettingsState extends State<Settings> {
                         child: Container(
                           width: MediaQuery.of(context).size.width / 2.0,
                           child: TextFormField(
-                            cursorColor: Colors.amber,
-                            initialValue: userData?.firstName,
-                            decoration: textInputDecoration,
-                            validator: (val) => val!.isEmpty ? "Please enter your first name" : null,
-                            //onChanged: (val) => setState(() => _currentFirstName = val),
-                            onChanged: (val) {
-                              setState(() => _currentFirstName = val);
-                            }
+                              cursorColor: Colors.amber,
+                              initialValue: userData?.firstName,
+                              decoration: textInputDecoration,
+                              validator: (val) => val!.isEmpty ? "Please enter your first name" : null,
+                              //onChanged: (val) => setState(() => _currentFirstName = val),
+                              onChanged: (val) {
+                                setState(() => _currentFirstName = val);
+                              }
                           ),
                         ),
                       ),
@@ -182,7 +181,7 @@ class _SettingsState extends State<Settings> {
                         alignment: Alignment.center,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: Color(0xFF8B0000)
+                              backgroundColor: Color(0xFF8B0000)
                           ),
                           onPressed: () async
                           {
@@ -237,4 +236,3 @@ class _SettingsState extends State<Settings> {
     );
   }
 }
-
