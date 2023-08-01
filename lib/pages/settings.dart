@@ -36,6 +36,7 @@ class _SettingsState extends State<Settings> {
           {
             UserData? userData = snapshot.data;
             return Scaffold(
+              backgroundColor: Colors.grey[300],
               appBar: AppBar(
                 title: Text(
                   "Update PGN Settings",
@@ -51,129 +52,68 @@ class _SettingsState extends State<Settings> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       SizedBox(height: 30),
-                      Container(
-                          margin: EdgeInsets.fromLTRB(10, 20, 10, 0),
-                          width: 100,
-                          height: 20,
-                          child: Align(
-                              alignment: Alignment.centerLeft,
-                              child: Text(
-                                  "First Name",
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    letterSpacing: 2.0,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black,
-                                  )
-                              )
-                          )
-                      ),
                       Padding(
-                        padding:const EdgeInsets.fromLTRB(10,0,10,0),
+                        padding: const EdgeInsets.only(left: 20, bottom: 10),
                         child: Container(
-                          width: MediaQuery.of(context).size.width / 2.0,
-                          child: TextFormField(
-                              cursorColor: Colors.amber,
-                              initialValue: userData?.firstName,
-                              decoration: textInputDecoration,
-                              validator: (val) => val!.isEmpty ? "Please enter your first name" : null,
-                              //onChanged: (val) => setState(() => _currentFirstName = val),
-                              onChanged: (val) {
-                                setState(() => _currentFirstName = val);
-                              }
+                          child: Text(
+                              "Personal Information",
+                            style: TextStyle(
+                              color: Color(0xFF8B0000),
+                              fontWeight: FontWeight.bold,
+                          ),
                           ),
                         ),
                       ),
-                      Container(
-                          margin: EdgeInsets.fromLTRB(10, 20, 10, 0),
-                          width: 100,
-                          height: 20,
-                          child: Align(
-                              alignment: Alignment.centerLeft,
-                              child: Text(
-                                  "Last Name",
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    letterSpacing: 2.0,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black,
-                                  )
-                              )
-                          )
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(10,0,10,0),
-                        child: Container(
-                          width: MediaQuery.of(context).size.width / 2.0,
-                          child: TextFormField(
-                              initialValue: userData?.lastName,
-                              decoration: textInputDecoration,
-                              validator: (val) => val!.isEmpty ? "Please enter your last name" : null,
-                              onChanged: (val) => setState(() => _currentLastName = val)
-                          ),
+                      CardWithLabel(
+                        label: "First Name",
+                        icon: Icon(Icons.person),
+                        child: TextFormField(
+                          cursorColor: Colors.amber,
+                          initialValue: userData?.firstName,
+                          decoration: textInputDecoration,
+                          validator: (val) =>
+                          val!.isEmpty ? "Please enter your first name" : null,
+                          onChanged: (val) {
+                            setState(() => _currentFirstName = val);
+                          },
                         ),
                       ),
-                      Container(
-                          margin: EdgeInsets.fromLTRB(10, 20, 10, 0),
-                          width: 100,
-                          height: 20,
-                          child: Align(
-                              alignment: Alignment.centerLeft,
-                              child: Text(
-                                  "Major",
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    letterSpacing: 2.0,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black,
-                                  )
-                              )
-                          )
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(10,0,10,0),
-                        child: Container(
-                          width: MediaQuery.of(context).size.width / 2.0,
-                          child: TextFormField(
-                              initialValue: userData?.major,
-                              decoration: textInputDecoration,
-                              validator: (val) => val!.isEmpty ? "Please enter your major" : null,
-                              onChanged: (val) => setState(() => _currentMajor = val)
-                          ),
+                      CardWithLabel(
+                        label: "Last Name",
+                        icon: Icon(Icons.person),
+                        child: TextFormField(
+                          cursorColor: Colors.amber,
+                          initialValue: userData?.lastName,
+                          decoration: textInputDecoration,
+                          validator: (val) =>
+                          val!.isEmpty ? "Please enter your last name" : null,
+                          onChanged: (val) => setState(() => _currentLastName = val),
                         ),
                       ),
-                      Container(
-                          margin: EdgeInsets.fromLTRB(10, 20, 10, 0),
-                          width: 100,
-                          height: 20,
-                          child: Align(
-                              alignment: Alignment.centerLeft,
-                              child: Text(
-                                  "Year",
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    letterSpacing: 2.0,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black,
-                                  )
-                              )
-                          )
+                      CardWithLabel(
+                        label: "Major",
+                        icon: Icon(Icons.school),
+                        child: TextFormField(
+                          cursorColor: Colors.amber,
+                          initialValue: userData?.major,
+                          decoration: textInputDecoration,
+                          validator: (val) => val!.isEmpty ? "Please enter your major" : null,
+                          onChanged: (val) => setState(() => _currentMajor = val),
+                        ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(10,0,10,0),
-                        child: Container(
-                          width: MediaQuery.of(context).size.width / 2.0,
-                          child: DropdownButtonFormField(
-                            value: userData?.year,
-                            decoration: textInputDecoration,
-                            items: years.map((year) {
-                              return DropdownMenuItem(
-                                value: year,
-                                child: Text('$year'),
-                              );
-                            }).toList(),
-                            onChanged: (val) => setState(() => _currentYear = val! ),
-                          ),
+                      CardWithLabel(
+                        label: "Year",
+                        icon: Icon(Icons.calendar_today),
+                        child: DropdownButtonFormField(
+                          value: userData?.year,
+                          decoration: textInputDecoration,
+                          items: years.map((year) {
+                            return DropdownMenuItem(
+                              value: year,
+                              child: Text('$year'),
+                            );
+                          }).toList(),
+                          onChanged: (val) => setState(() => _currentYear = val!),
                         ),
                       ),
                       SizedBox(height:20.0),
@@ -230,9 +170,57 @@ class _SettingsState extends State<Settings> {
           {
             return Loading();
           }
-
-
         }
     );
   }
 }
+
+
+class CardWithLabel extends StatelessWidget {
+  final String label;
+  final Widget child;
+  final Widget icon;
+
+  const CardWithLabel({required this.label, required this.child, required this.icon});
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 2,
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            icon,
+            SizedBox(width: 16),
+            Expanded(
+              flex: 1,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    label,
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 2.0,
+                      color: Colors.black,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(width: 16), // Add some spacing between the label and the child
+            Expanded(
+              flex: 3,
+              child: child,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
