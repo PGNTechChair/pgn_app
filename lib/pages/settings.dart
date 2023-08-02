@@ -15,7 +15,7 @@ class Settings extends StatefulWidget {
 
 class _SettingsState extends State<Settings> {
   final _formKey = GlobalKey<FormState>();
-  final List<String> years = ['Freshman', 'Sophomore', 'Junior', 'Senior', 'Other'];
+  final List<String> years = ['Freshman', 'Sophomore', 'Junior', 'Senior'];
 
   // form values
   late String? _currentFirstName = '';

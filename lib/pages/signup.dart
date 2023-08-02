@@ -22,6 +22,8 @@ class _SignUpState extends State<SignUp> {
   final AuthService _authService = AuthService();
   final _formKey = GlobalKey<FormState>();
   bool loading = false;
+  final List<String> years = ['Freshman', 'Sophomore', 'Junior', 'Senior'];
+
 
   // text field state
   String email = '';
@@ -93,7 +95,7 @@ class _SignUpState extends State<SignUp> {
                   SizedBox(height: 8.0),
                   Container(
                       margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                      width: 150,
+                      width: double.infinity,
                       height: 50,
                       child: Align(
                           alignment: Alignment.centerLeft,
@@ -137,12 +139,12 @@ class _SignUpState extends State<SignUp> {
                   ),
                   Container(
                       margin: EdgeInsets.fromLTRB(10, 20, 10, 0),
-                      width: 100,
+                      width: double.infinity,
                       height: 20,
                       child: Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
-                              "First Name",
+                              "First Name *",
                               style: TextStyle(
                                 fontSize: 15,
                                 letterSpacing: 2.0,
@@ -152,13 +154,19 @@ class _SignUpState extends State<SignUp> {
                           )
                       )
                   ),
-                  SizedBox(height: 8.0),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(10,0,10,0),
                     child: SizedBox(
                       width: 300,
-                      height: 50,
+                      height: 80,
                       child: TextFormField(
+                        validator: (String? val) {
+                          if (val != null && val.isEmpty)
+                          {
+                            return "required *";
+                          }
+                          return null;
+                        },
                           onChanged: (val)
                           {
                             setState(() => firstName = val);
@@ -167,18 +175,19 @@ class _SignUpState extends State<SignUp> {
                             fillColor: Colors.white70,
                             filled: true,
                             border: OutlineInputBorder(),
-                        ),
+                            errorStyle: TextStyle(color: Colors.white, height: .7),
+                          ),
                       ),
                     ),
                   ),
                   Container(
                       margin: EdgeInsets.fromLTRB(10, 20, 10, 0),
-                      width: 100,
+                      width: double.infinity,
                       height: 20,
                       child: Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
-                              "Last Name",
+                              "Last Name *",
                               style: TextStyle(
                                 fontSize: 15,
                                 letterSpacing: 2.0,
@@ -188,13 +197,19 @@ class _SignUpState extends State<SignUp> {
                           )
                       )
                   ),
-                  SizedBox(height: 8.0),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(10,0,10,0),
                     child: SizedBox(
                       width: 300,
-                      height: 50,
+                      height: 80,
                       child: TextFormField(
+                        validator: (String? val) {
+                          if (val != null && val.isEmpty)
+                          {
+                            return "required *";
+                          }
+                          return null;
+                          },
                         onChanged: (val)
                         {
                           setState(() => lastName = val);
@@ -202,6 +217,7 @@ class _SignUpState extends State<SignUp> {
                         decoration: InputDecoration(
                           fillColor: Colors.white70,
                           filled: true,
+                          errorStyle: TextStyle(color: Colors.white, height: .7),
                           border: OutlineInputBorder(),
                         ),
                       ),
@@ -209,12 +225,12 @@ class _SignUpState extends State<SignUp> {
                   ),
                   Container(
                       margin: EdgeInsets.fromLTRB(10, 20, 10, 0),
-                      width: 100,
+                      width: double.infinity,
                       height: 20,
                       child: Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
-                              "Email",
+                              "Email *",
                               style: TextStyle(
                                 fontSize: 15,
                                 letterSpacing: 2.0,
@@ -224,12 +240,11 @@ class _SignUpState extends State<SignUp> {
                           )
                       )
                   ),
-                  SizedBox(height: 8.0),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(10,0,10,0),
                     child: SizedBox(
                       width: 300,
-                      height: 50,
+                      height: 80,
                       child: TextFormField(
                         validator: (String? val) {
                           if (val != null && val.isEmpty || !val!.contains("@"))
@@ -253,12 +268,12 @@ class _SignUpState extends State<SignUp> {
                   ),
                   Container(
                       margin: EdgeInsets.fromLTRB(10, 20, 10, 0),
-                      width: 100,
+                      width: double.infinity,
                       height: 20,
                       child: Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
-                              "Password",
+                              "Password *",
                               style: TextStyle(
                                 fontSize: 15,
                                 letterSpacing: 2.0,
@@ -268,12 +283,11 @@ class _SignUpState extends State<SignUp> {
                           )
                       )
                   ),
-                  SizedBox(height: 8.0),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(10,0,10,0),
                     child: SizedBox(
                       width: 300,
-                      height: 50,
+                      height: 80,
                       child: TextFormField(
                         validator: (String? val) {
                           if (val != null && val.length < 6)
@@ -297,12 +311,12 @@ class _SignUpState extends State<SignUp> {
                   ),
                   Container(
                       margin: EdgeInsets.fromLTRB(10, 20, 10, 0),
-                      width: 100,
+                      width: double.infinity,
                       height: 20,
                       child: Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
-                              "Major",
+                              "Major *",
                               style: TextStyle(
                                 fontSize: 15,
                                 letterSpacing: 2.0,
@@ -312,13 +326,19 @@ class _SignUpState extends State<SignUp> {
                           )
                       )
                   ),
-                  SizedBox(height: 8.0),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(10,0,10,0),
                     child: SizedBox(
                       width: 300,
-                      height: 50,
+                      height: 80,
                       child: TextFormField(
+                        validator: (String? val) {
+                          if (val != null && val.isEmpty)
+                          {
+                            return "required *";
+                          }
+                          return null;
+                        },
                         onChanged: (val)
                         {
                           setState(() => major = val);
@@ -327,18 +347,19 @@ class _SignUpState extends State<SignUp> {
                           fillColor: Colors.white70,
                           filled: true,
                           border: OutlineInputBorder(),
+                          errorStyle: TextStyle(color: Colors.white, height: .7),
                         ),
                       ),
                     ),
                   ),
                   Container(
                       margin: EdgeInsets.fromLTRB(10, 20, 10, 0),
-                      width: 100,
+                      width: double.infinity,
                       height: 20,
                       child: Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
-                              "Year",
+                              "Year *",
                               style: TextStyle(
                                 fontSize: 15,
                                 letterSpacing: 2.0,
@@ -348,23 +369,26 @@ class _SignUpState extends State<SignUp> {
                           )
                       )
                   ),
-                  SizedBox(height: 8.0),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(10,0,10,0),
                     child: SizedBox(
                       width: 300,
-                      height: 50,
-                      //TODO - Change this to a dropdown
-                      child: TextFormField(
-                        onChanged: (val)
-                        {
-                          setState(() => year = val);
-                        },
+                      height: 80,
+                      child: DropdownButtonFormField(
+                        value: "Freshman",
                         decoration: InputDecoration(
                           fillColor: Colors.white70,
                           filled: true,
                           border: OutlineInputBorder(),
+                          errorStyle: TextStyle(color: Colors.white, height: .7),
                         ),
+                        items: years.map((year) {
+                          return DropdownMenuItem(
+                            value: year,
+                            child: Text('$year'),
+                          );
+                        }).toList(),
+                        onChanged: (val) => setState(() => year = val!),
                       ),
                     ),
                     ),
