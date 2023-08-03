@@ -23,6 +23,7 @@ class _SignUpState extends State<SignUp> {
   final _formKey = GlobalKey<FormState>();
   bool loading = false;
   final List<String> years = ['Freshman', 'Sophomore', 'Junior', 'Senior'];
+  final List<String> statuses = ['Member', 'Rushee', 'Guest'];
 
 
   // text field state
@@ -33,9 +34,11 @@ class _SignUpState extends State<SignUp> {
   String firstName = '';
   String lastName = '';
   String error = '';
+  String memberStatus = '';
 
   @override
   Widget build(BuildContext context) {
+
     return loading ? Loading() : Scaffold(
       backgroundColor: Colors.transparent,
       body: Container(
@@ -230,6 +233,50 @@ class _SignUpState extends State<SignUp> {
                       child: Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
+                              "Member Status *",
+                              style: TextStyle(
+                                fontSize: 15,
+                                letterSpacing: 2.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                          ),
+                      ),
+                  ),
+                  Wrap(
+                    spacing: 10,
+                    runSpacing: 10,
+                    children: statuses.map((status) {
+                      return Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Radio(
+                            fillColor: MaterialStateColor.resolveWith((states) => Colors.amber),
+                            value: status,
+                            groupValue: memberStatus,
+                            onChanged: (String? val) {
+                              setState(() {
+                                memberStatus = val!;
+                              });
+                            },
+                          ),
+                          Text(
+                              status,
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ), // This will display the text alongside the Radio button.
+                        ],
+                      );
+                    }).toList(),
+                  ),
+                  Container(
+                      margin: EdgeInsets.fromLTRB(10, 20, 10, 0),
+                      width: double.infinity,
+                      height: 20,
+                      child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
                               "Email *",
                               style: TextStyle(
                                 fontSize: 15,
@@ -401,7 +448,7 @@ class _SignUpState extends State<SignUp> {
                         if (_formKey.currentState!.validate()) {
                           setState(() => loading = true);
                           dynamic result = await _authService.registerWithEmailAndPassword(
-                              email, password, major, year, firstName, lastName);
+                              email, password, major, year, firstName, lastName, memberStatus);
 
                           if (result == null) {
                             setState(() {
