@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import "package:pgn_app/models/user.dart";
 import "package:pgn_app/pages/home.dart";
 import "package:pgn_app/pages/signup.dart";
-import "package:pgn_app/pages/thankyou.dart";
 import "package:pgn_app/pages/login.dart";
 import "package:pgn_app/pages/wrapper.dart";
 import "package:pgn_app/services/auth.dart";
@@ -26,7 +25,6 @@ void main() async {
           '/': (context) => Wrapper(),
           '/home': (context) => Home(),
           '/signup': (context) => SignUp(toggleView: () {}),
-          '/thankyou': (context) => ThankYou(),
           '/login': (context) => Login(toggleView: () {}),
         },
       ),

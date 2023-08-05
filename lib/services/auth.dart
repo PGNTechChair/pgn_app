@@ -19,24 +19,6 @@ class AuthService
     return _auth.authStateChanges().map(_userFromFirebaseUser);
   }
 
-  //sign in anon
-  Future signInAnon() async
-  {
-    try
-    {
-       UserCredential result = await _auth.signInAnonymously();
-       User? user = result.user;
-       return _userFromFirebaseUser(user);
-    }
-    catch(e)
-    {
-      print(e.toString());
-      return null;
-    }
-
-  }
-
-
   //sign in email and password
   Future signInWithEmailAndPassword(String email, String password) async
   {
@@ -62,7 +44,7 @@ class AuthService
 
 
   //register with email and password
-  Future registerWithEmailAndPassword(String email, String password, String major, String year, String firstName, String lastName
+  Future registerWithEmailAndPassword(String email, String password, String major, String year, String firstName, String lastName, [String memberStatus = ""]
     ) async {
     try
     {
@@ -74,7 +56,7 @@ class AuthService
       User? user = result.user;
 
       //create a new document for the user with the uid
-      await DatabaseService(uid: user!.uid).updateUserData(major,year,firstName,lastName);
+      await DatabaseService(uid: user!.uid).updateUserData(major,year,firstName,lastName, memberStatus);
 
       return _userFromFirebaseUser(user);
     }

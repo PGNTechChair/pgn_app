@@ -2,25 +2,41 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pgn_app/models/member.dart';
 import 'package:pgn_app/models/user.dart';
 
-class DatabaseService
-{
+class DatabaseService {
 
   final String uid;
+
   DatabaseService({required this.uid});
 
   //collection reference
-  final CollectionReference pgnCollection = FirebaseFirestore.instance.collection("pgnmembers");
+  final CollectionReference pgnCollection = FirebaseFirestore.instance
+      .collection("pgnmembers");
 
-  Future updateUserData(String major, String year, String firstName, String lastName) async
+  Future updateUserData(String major, String year, String firstName,
+      String lastName, [String memberStatus = ""]) async
   {
-    return await pgnCollection.doc(uid).set({
+    if (memberStatus != "") {
+      return await pgnCollection.doc(uid).set({
+        'major': major,
+        'year': year,
+        'firstName': firstName,
+        'lastName': lastName,
+        'memberStatus': memberStatus,
+      });
+    }
+
+    else
+    {
+      return await pgnCollection.doc(uid).set({
         'major': major,
         'year': year,
         'firstName':firstName,
         'lastName':lastName,
-    });
+        'memberStatus': memberStatus,
+      });
   }
 
+}
   //pgn member list from snapshot
   List<Member> _memberListFromSnapshot(QuerySnapshot snapshot)
   {
@@ -29,7 +45,8 @@ class DatabaseService
         major: doc.get("major").toString() ?? '',
         year: doc.get("year").toString() ?? '',
         firstName: doc.get("firstName").toString() ?? '',
-        lastName: doc.get("lastName").toString() ?? ''
+        lastName: doc.get("lastName").toString() ?? '',
+        memberStatus: doc.get("memberStatus").toString() ?? ''
       );
     }).toList();
   }
@@ -39,10 +56,11 @@ class DatabaseService
   {
     return UserData(
       uid: uid,
-      firstName: snapshot.get("firstName"),
-      lastName: snapshot.get("lastName"),
-      major: snapshot.get("major"),
-      year: snapshot.get("year"),
+      firstName: snapshot.get("firstName") ?? '',
+      lastName: snapshot.get("lastName") ?? '',
+      major: snapshot.get("major") ?? '',
+      year: snapshot.get("year") ?? '',
+      memberStatus: snapshot.get("memberStatus") ?? '',
 
     );
   }

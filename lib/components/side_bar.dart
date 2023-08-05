@@ -47,7 +47,7 @@ class SideBar extends StatelessWidget {
                       child: SingleChildScrollView(
                         child: Column(
                           children: [
-                            InfoCard(name: userData.firstName, userStatus: userData.major),
+                            InfoCard(name: userData.firstName, userStatus: userData.memberStatus),
                             Padding(
                               padding: const EdgeInsets.only(top: 32.0, bottom: 16.0),
                               child: Text(

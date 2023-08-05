@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pgn_app/components/side_bar.dart';
 import 'package:pgn_app/models/user.dart';
-import 'package:pgn_app/pages/settings_form.dart';
 import 'package:pgn_app/services/auth.dart';
 import 'package:pgn_app/services/database.dart';
 import 'package:provider/provider.dart';
@@ -51,7 +50,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
     _animationController.dispose();
     super.dispose();
   }
-
 
   @override
   Widget build(BuildContext context) {
