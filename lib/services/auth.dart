@@ -44,7 +44,7 @@ class AuthService
 
 
   //register with email and password
-  Future registerWithEmailAndPassword(String email, String password, String major, String year, String firstName, String lastName, String memberStatus
+  Future registerWithEmailAndPassword(String email, String password, String major, String year, String firstName, String lastName, [String memberStatus = ""]
     ) async {
     try
     {

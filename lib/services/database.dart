@@ -32,6 +32,7 @@ class DatabaseService {
         'year': year,
         'firstName':firstName,
         'lastName':lastName,
+        'memberStatus': memberStatus,
       });
   }
 
@@ -55,11 +56,11 @@ class DatabaseService {
   {
     return UserData(
       uid: uid,
-      firstName: snapshot.get("firstName"),
-      lastName: snapshot.get("lastName"),
-      major: snapshot.get("major"),
-      year: snapshot.get("year"),
-      memberStatus: snapshot.get("memberStatus"),
+      firstName: snapshot.get("firstName") ?? '',
+      lastName: snapshot.get("lastName") ?? '',
+      major: snapshot.get("major") ?? '',
+      year: snapshot.get("year") ?? '',
+      memberStatus: snapshot.get("memberStatus") ?? '',
 
     );
   }

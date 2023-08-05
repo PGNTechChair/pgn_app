@@ -16,7 +16,6 @@ class UserData
   final String memberStatus;
 
   UserData({required this.uid, required this.firstName,
-    required this.lastName, required this.major, required this.year,
-    required this.memberStatus});
+    required this.lastName, required this.major, required this.year, required this.memberStatus});
 
 }

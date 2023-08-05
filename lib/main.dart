@@ -20,7 +20,7 @@ void main() async {
       value: AuthService().user,
       initialData: null,
       child: MaterialApp(
-        initialRoute: '/',
+        initialRoute: '/signup',
         routes: {
           '/': (context) => Wrapper(),
           '/home': (context) => Home(),

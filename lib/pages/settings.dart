@@ -149,7 +149,8 @@ class _SettingsState extends State<Settings> {
                                   _currentMajor ?? userData!.major,
                                   _currentYear ?? userData!.year,
                                   _currentFirstName ?? userData!.firstName,
-                                  _currentLastName ?? userData!.lastName
+                                  _currentLastName ?? userData!.lastName,
+                                  userData!.memberStatus ?? ''
                               );
                               if (mounted) Navigator.pop(context);
                             }
