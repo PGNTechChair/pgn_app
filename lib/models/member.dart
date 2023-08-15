@@ -8,4 +8,6 @@ class Member
 
   Member({required this.major, required this.year, required this.firstName, required this.lastName, required this.memberStatus});
 
+  //Test comment
+
 }
