@@ -59,6 +59,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
       value: DatabaseService(uid: uid ?? '').userData,
       initialData: null,
       child: Scaffold(
+        backgroundColor: Colors.red[100],
         floatingActionButton: FloatingActionButton(
           backgroundColor: Colors.amber[700],
           mini: true,
@@ -66,23 +67,53 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
           onPressed: toggleSidebar,
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
-        body: Stack(
-          children: [
-            Center(
-              child: Text('Home'),
-            ),
-            if (isSidebarOpen)
-              GestureDetector(
-                onTap: toggleSidebar,
-                child: Container(
-                  color: Colors.black.withOpacity(0.5),
+        body: SafeArea(
+          child: Stack(
+            children: [
+              Container(
+                margin: const EdgeInsets.only(top: 18, left: 24, right: 24),
+                child: Column(
+                  children: [
+                    Expanded(
+                      child: ListView(
+                        physics: const BouncingScrollPhysics(),
+                        children: [
+                          SizedBox(height:32),
+                          Center(
+                            child: Image.asset(
+                                'assets/pgn-logo.png',
+                              scale: 1.2,
+                            ),
+                          ),
+                          SizedBox(height: 16),
+                          Center(
+                            child: Text(
+                                "Welcome!",
+                                style: TextStyle(
+                                  fontSize: 32,
+                                  fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              SlideTransition(
-                position: _slideAnimation,
-                child: SideBar(),
-              ),
-          ],
+              if (isSidebarOpen)
+                GestureDetector(
+                  onTap: toggleSidebar,
+                  child: Container(
+                    color: Colors.black.withOpacity(0.5),
+                  ),
+                ),
+                SlideTransition(
+                  position: _slideAnimation,
+                  child: SideBar(),
+                ),
+            ],
+          ),
         ),
       ),
     );
