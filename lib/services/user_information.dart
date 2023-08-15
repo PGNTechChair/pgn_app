@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pgn_app/models/member.dart';
 import 'package:pgn_app/models/user.dart';
-import 'package:pgn_app/services/pgn_tile.dart';
+import 'package:pgn_app/components/pgn_tile.dart';
 import 'package:pgn_app/shared/loading.dart';
 import 'package:provider/provider.dart';
 

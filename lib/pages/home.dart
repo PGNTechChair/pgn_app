@@ -78,7 +78,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                       child: ListView(
                         physics: const BouncingScrollPhysics(),
                         children: [
-                          SizedBox(height:32),
+                          SizedBox(height: 32),
                           Center(
                             child: Image.asset(
                                 'assets/pgn-logo.png',
@@ -94,6 +94,15 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                   fontWeight: FontWeight.bold,
                               ),
                             ),
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              _cardMenu(
+                                  title: "PlaceHolder 1",
+                                  icon: "placeholderimage1.png"
+                              ),
+                            ],
                           ),
                         ],
                       ),
@@ -118,4 +127,39 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
       ),
     );
   }
+}
+
+
+Widget _cardMenu({
+  required String title,
+  required String icon,
+  VoidCallback? onTap,
+  Color color = Colors.white,
+  Color fontColor = Colors.grey
+}) {
+  return GestureDetector(
+    onTap: onTap,
+    child: Container(
+      padding: const EdgeInsets.symmetric(vertical: 36),
+      width: 156,
+      height: 156,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(24),
+        color: color,
+      ),
+      child: Column(
+        children: [
+          Image.asset(icon),
+          SizedBox(height: 10),
+          Text(
+            title,
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: fontColor
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
 }
