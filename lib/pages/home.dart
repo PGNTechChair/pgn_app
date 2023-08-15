@@ -85,25 +85,55 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                               scale: 1.2,
                             ),
                           ),
-                          SizedBox(height: 16),
-                          Center(
-                            child: Text(
-                                "Welcome!",
-                                style: TextStyle(
-                                  fontSize: 32,
-                                  fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
+                          SizedBox(height: 60),
                           Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               _cardMenu(
-                                  title: "PlaceHolder 1",
-                                  icon: "placeholderimage1.png"
+                                  title: "Why Rush PGN?",
+                                  width: MediaQuery.of(context).size.width - 100,
+                                  height: MediaQuery.of(context).size.width - 100,
+                                  icon: "assets/placeholderimage1.png"
                               ),
                             ],
                           ),
+                          SizedBox(height: 30),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              _cardMenu(
+                                  title: "Tips for Rushees",
+                                  width: MediaQuery.of(context).size.width - 100,
+                                  height: MediaQuery.of(context).size.width - 100,
+                                  icon: "assets/placeholderimage2.png"
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 30),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              _cardMenu(
+                                  title: "Member Internship Spotlight",
+                                  width: MediaQuery.of(context).size.width - 100,
+                                  height: MediaQuery.of(context).size.width - 100,
+                                  icon: "assets/placeholderimage3.png"
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 30),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              _cardMenu(
+                                  title: "Watch Our Podcast!",
+                                  width: MediaQuery.of(context).size.width - 100,
+                                  height: MediaQuery.of(context).size.width - 100,
+                                  icon: "assets/placeholderimage4.png"
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 30),
                         ],
                       ),
                     ),
@@ -133,27 +163,31 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
 Widget _cardMenu({
   required String title,
   required String icon,
+  required double width,
+  required double height,
   VoidCallback? onTap,
-  Color color = Colors.white,
-  Color fontColor = Colors.grey
+  Color fontColor = Colors.red,
 }) {
   return GestureDetector(
     onTap: onTap,
     child: Container(
-      padding: const EdgeInsets.symmetric(vertical: 36),
-      width: 156,
-      height: 156,
+      padding: const EdgeInsets.only(bottom: 10, top: 18),
+      width: width,
+      height: height,
+      constraints: BoxConstraints(maxHeight: height),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(24),
-        color: color,
+        color: Colors.grey[100],
       ),
-      child: Column(
+      child: ListView(
         children: [
-          Image.asset(icon),
-          SizedBox(height: 10),
+          Image.asset(icon, width: width / 2, height: height / 2),
+          SizedBox(height: height / 8),
           Text(
+            textAlign: TextAlign.center,
             title,
             style: TextStyle(
+              fontSize: 30,
               fontWeight: FontWeight.bold,
               color: fontColor
             ),
