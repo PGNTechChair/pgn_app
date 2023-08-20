@@ -8,7 +8,7 @@ import 'package:pgn_app/pages/home/story4page.dart';
 import 'package:pgn_app/services/auth.dart';
 import 'package:pgn_app/services/database.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter/painting.dart';
 
 
 class Home extends StatefulWidget {
@@ -65,7 +65,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
       value: DatabaseService(uid: uid ?? '').userData,
       initialData: null,
       child: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.indigo[50],
         floatingActionButton: Align(
           alignment: Alignment.topLeft,
           child: Padding(
@@ -101,7 +101,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                             children: [
                               Container(
                                 height: 20,
-                                color: Colors.white,
+                                color: Colors.indigo[50],
                                 width: MediaQuery.of(context).size.width,
                               ),
                             ],
@@ -109,12 +109,12 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                           Row(
                             children: [
                               Container(
-                                color: Colors.white,
+                                color: Colors.indigo[50],
                                 width: MediaQuery.of(context).size.width * (1/5),
                                 height: 150,
                               ),
                               Container(
-                                color: Colors.white,
+                                color: Colors.indigo[50],
                                 width: MediaQuery.of(context).size.width * (3/5),
                                 child: Center(
                                   child: Image.asset(
@@ -125,7 +125,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                 ),
                               ),
                               Container(
-                                color: Colors.white,
+                                color: Colors.indigo[50],
                                 width: MediaQuery.of(context).size.width * (1/5),
                                 height: 150,
                               ),
@@ -241,13 +241,21 @@ Widget _cardMenu({
   return GestureDetector(
     onTap: onTap,
     child: Container(
-      padding: const EdgeInsets.only(bottom: 10, top: 18),
+      padding: const EdgeInsets.only(bottom: 5, top: 18),
       width: width,
       height: height,
       constraints: BoxConstraints(maxHeight: height),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(24),
-        color: Colors.grey[100],
+        gradient: LinearGradient(
+          colors: [Colors.indigo[50]!, Colors.white70!],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        border: Border.all(
+          color: Colors.amber,  // Use the gold color for the border
+          width: 10.0,          // Set the desired border width
+        ),
       ),
       child: Column(
         children: [
