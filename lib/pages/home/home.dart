@@ -252,6 +252,14 @@ Widget _cardMenu({
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.3),
+            spreadRadius: 10,
+            blurRadius: 5,
+            offset: Offset(0, 5),
+          ),
+        ],
         border: Border.all(
           color: Colors.amber,  // Use the gold color for the border
           width: 10.0,          // Set the desired border width
