@@ -4,6 +4,8 @@ import 'package:pgn_app/models/user.dart';
 import 'package:pgn_app/services/auth.dart';
 import 'package:pgn_app/services/database.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
 
 class Home extends StatefulWidget {
   @override
@@ -59,31 +61,72 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
       value: DatabaseService(uid: uid ?? '').userData,
       initialData: null,
       child: Scaffold(
-        backgroundColor: Colors.red[100],
-        floatingActionButton: FloatingActionButton(
-          backgroundColor: Colors.amber[700],
-          mini: true,
-          child: Icon(Icons.menu),
-          onPressed: toggleSidebar,
+        backgroundColor: Colors.white,
+        floatingActionButton: Align(
+          alignment: Alignment.topLeft,
+          child: Padding(
+            padding: EdgeInsets.only(top: 10),
+            child: FloatingActionButton(
+              backgroundColor: Colors.amber[700],
+              mini: true,
+              child: Icon(Icons.menu),
+              onPressed: toggleSidebar,
+            ),
+          ),
         ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
+        floatingActionButtonLocation: FloatingActionButtonLocation.miniStartTop,
         body: SafeArea(
           child: Stack(
             children: [
-              Container(
-                margin: const EdgeInsets.only(top: 18, left: 24, right: 24),
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage('assets/themebackground.png'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                //margin: const EdgeInsets.only(top: 18, left: 24, right: 24),
                 child: Column(
                   children: [
                     Expanded(
                       child: ListView(
                         physics: const BouncingScrollPhysics(),
                         children: [
-                          SizedBox(height: 32),
-                          Center(
-                            child: Image.asset(
-                                'assets/pgn-logo.png',
-                              scale: 1.2,
-                            ),
+                          Row(
+                            children: [
+                              Container(
+                                height: 20,
+                                color: Colors.white,
+                                width: MediaQuery.of(context).size.width,
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Container(
+                                color: Colors.white,
+                                width: MediaQuery.of(context).size.width * (1/5),
+                                height: 150,
+                              ),
+                              Container(
+                                color: Colors.white,
+                                width: MediaQuery.of(context).size.width * (3/5),
+                                child: Center(
+                                  child: Image.asset(
+                                      'assets/pgn-logo.png',
+                                    width: MediaQuery.of(context).size.width - 100,
+                                    height: 150
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                color: Colors.white,
+                                width: MediaQuery.of(context).size.width * (1/5),
+                                height: 150,
+                              ),
+                            ],
                           ),
                           SizedBox(height: 60),
                           Row(
