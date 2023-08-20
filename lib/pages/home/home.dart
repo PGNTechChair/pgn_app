@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:pgn_app/components/side_bar.dart';
 import 'package:pgn_app/models/user.dart';
+import 'package:pgn_app/pages/home/story1page.dart';
+import 'package:pgn_app/pages/home/story2page.dart';
+import 'package:pgn_app/pages/home/story3page.dart';
+import 'package:pgn_app/pages/home/story4page.dart';
 import 'package:pgn_app/services/auth.dart';
 import 'package:pgn_app/services/database.dart';
 import 'package:provider/provider.dart';
@@ -92,7 +96,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   children: [
                     Expanded(
                       child: ListView(
-                        physics: const BouncingScrollPhysics(),
                         children: [
                           Row(
                             children: [
@@ -133,10 +136,16 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               _cardMenu(
-                                  title: "Why Rush PGN?",
-                                  width: MediaQuery.of(context).size.width - 100,
-                                  height: MediaQuery.of(context).size.width - 100,
-                                  icon: "assets/placeholderimage1.png"
+                                onTap: () {
+                                  Navigator.push(context,
+                                    MaterialPageRoute(builder: (context) => const StoryPage1(),
+                                    ),
+                                  );
+                                },
+                                title: "Why Rush PGN?",
+                                width: MediaQuery.of(context).size.width - 100,
+                                height: MediaQuery.of(context).size.width - 100,
+                                icon: "assets/placeholderimage1.png"
                               ),
                             ],
                           ),
@@ -145,6 +154,12 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               _cardMenu(
+                                  onTap: () {
+                                    Navigator.push(context,
+                                      MaterialPageRoute(builder: (context) => const StoryPage2(),
+                                      ),
+                                    );
+                                  },
                                   title: "Tips for Rushees",
                                   width: MediaQuery.of(context).size.width - 100,
                                   height: MediaQuery.of(context).size.width - 100,
@@ -157,6 +172,12 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               _cardMenu(
+                                  onTap: () {
+                                    Navigator.push(context,
+                                      MaterialPageRoute(builder: (context) => const StoryPage3(),
+                                      ),
+                                    );
+                                  },
                                   title: "Member Internship Spotlight",
                                   width: MediaQuery.of(context).size.width - 100,
                                   height: MediaQuery.of(context).size.width - 100,
@@ -169,6 +190,12 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               _cardMenu(
+                                  onTap: () {
+                                    Navigator.push(context,
+                                      MaterialPageRoute(builder: (context) => const StoryPage4(),
+                                      ),
+                                    );
+                                  },
                                   title: "Watch Our Podcast!",
                                   width: MediaQuery.of(context).size.width - 100,
                                   height: MediaQuery.of(context).size.width - 100,
@@ -222,7 +249,7 @@ Widget _cardMenu({
         borderRadius: BorderRadius.circular(24),
         color: Colors.grey[100],
       ),
-      child: ListView(
+      child: Column(
         children: [
           Image.asset(icon, width: width / 2, height: height / 2),
           SizedBox(height: height / 8),
