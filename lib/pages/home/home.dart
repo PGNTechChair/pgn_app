@@ -100,18 +100,9 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                           Row(
                             children: [
                               Container(
-                                height: 20,
-                                color: Colors.indigo[50],
-                                width: MediaQuery.of(context).size.width,
-                              ),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Container(
                                 color: Colors.indigo[50],
                                 width: MediaQuery.of(context).size.width * (1/5),
-                                height: 150,
+                                height: MediaQuery.of(context).size.height * (150/683.4),
                               ),
                               Container(
                                 color: Colors.indigo[50],
@@ -120,14 +111,14 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                   child: Image.asset(
                                       'assets/pgn-logo.png',
                                     width: MediaQuery.of(context).size.width - 100,
-                                    height: 150
+                                    height: MediaQuery.of(context).size.height * (150/683.4)
                                   ),
                                 ),
                               ),
                               Container(
                                 color: Colors.indigo[50],
                                 width: MediaQuery.of(context).size.width * (1/5),
-                                height: 150,
+                                height: MediaQuery.of(context).size.height * (150/683.4),
                               ),
                             ],
                           ),
@@ -196,7 +187,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                       ),
                                     );
                                   },
-                                  title: "Watch Our Podcast!",
+                                  title: "Watch Our Podcast",
                                   width: MediaQuery.of(context).size.width - 100,
                                   height: MediaQuery.of(context).size.width - 100,
                                   icon: "assets/placeholderimage4.png"
@@ -204,6 +195,42 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                             ],
                           ),
                           SizedBox(height: 30),
+                          Container(
+                            color: Colors.black,
+                            width: MediaQuery.of(context).size.width,
+                            height: MediaQuery.of(context).size.height * (1/4),
+                            child: Align(
+                              alignment: FractionalOffset(.5 , .5),
+                              child: Text(
+                                "PGN is a professional development organization for all majors…",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  color: Colors.amber,
+                                  fontSize: 26,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: "VarelaRound",
+                                ),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            color: Colors.black,
+                            width: MediaQuery.of(context).size.width,
+                            height: MediaQuery.of(context).size.height * (1/4),
+                            child: Align(
+                              alignment: FractionalOffset(.5 , 0),
+                              child: Text(
+                                "…that believes there are clear steps, training and support networks that can mitigate underemployment and unemployment risk, and prepare graduates for a lifetime of success.",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  color: Colors.amber,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: "VarelaRound",
+                                ),
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                     ),
