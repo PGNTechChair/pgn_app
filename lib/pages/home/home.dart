@@ -199,16 +199,19 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                             color: Colors.black,
                             width: MediaQuery.of(context).size.width,
                             height: MediaQuery.of(context).size.height * (1/4),
-                            child: Align(
-                              alignment: FractionalOffset(.5 , .5),
-                              child: Text(
-                                "PGN is a professional development organization for all majors…",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  color: Colors.amber,
-                                  fontSize: 26,
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: "VarelaRound",
+                            child: Padding(
+                              padding: const EdgeInsets.all(16.0),
+                              child: Align(
+                                alignment: FractionalOffset(.5 , .5),
+                                child: Text(
+                                  "PGN is a professional development organization for all majors…",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Colors.amber,
+                                    fontSize: 26,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: "VarelaRound",
+                                  ),
                                 ),
                               ),
                             ),
@@ -217,16 +220,19 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                             color: Colors.black,
                             width: MediaQuery.of(context).size.width,
                             height: MediaQuery.of(context).size.height * (1/4),
-                            child: Align(
-                              alignment: FractionalOffset(.5 , 0),
-                              child: Text(
-                                "…that believes there are clear steps, training and support networks that can mitigate underemployment and unemployment risk, and prepare graduates for a lifetime of success.",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  color: Colors.amber,
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: "VarelaRound",
+                            child: Padding(
+                              padding: const EdgeInsets.all(4.0),
+                              child: Align(
+                                alignment: FractionalOffset(.5 , 0),
+                                child: Text(
+                                  "…that believes there are clear steps, training and support networks that can mitigate underemployment and unemployment risk, and prepare graduates for a lifetime of success.",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Colors.amber,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: "VarelaRound",
+                                  ),
                                 ),
                               ),
                             ),
