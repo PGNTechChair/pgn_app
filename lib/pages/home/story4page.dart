@@ -36,7 +36,7 @@ class _StoryPage4State extends State<StoryPage4> {
                           borderRadius: BorderRadius.circular(5)
                         ),
                         child: Image.asset(
-                          "assets/Cropped_Image.png",
+                          "assets/DavidEnghauser.png",
                           width: MediaQuery.of(context).size.width- 175,
                           height: MediaQuery.of(context).size.width- 175,
                         ),

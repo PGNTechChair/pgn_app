@@ -6,7 +6,6 @@ import 'package:pgn_app/pages/home/story1page.dart';
 import 'package:pgn_app/pages/home/story2page.dart';
 import 'package:pgn_app/pages/home/story3page.dart';
 import 'package:pgn_app/pages/home/story4page.dart';
-import 'package:pgn_app/services/auth.dart';
 import 'package:pgn_app/services/database.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -216,11 +215,10 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                 child: Text(
                                   "PGN is a professional development organization for all majors…",
                                   textAlign: TextAlign.center,
-                                  style: TextStyle(
+                                  style: GoogleFonts.varelaRound(
                                     color: Colors.amber,
                                     fontSize: 26,
                                     fontWeight: FontWeight.bold,
-                                    fontFamily: "VarelaRound",
                                   ),
                                 ),
                               ),
@@ -237,11 +235,10 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                 child: Text(
                                   "…that believes there are clear steps, training and support networks that can mitigate underemployment and unemployment risk, and prepare graduates for a lifetime of success.",
                                   textAlign: TextAlign.center,
-                                  style: TextStyle(
+                                  style: GoogleFonts.varelaRound(
                                     color: Colors.amber,
                                     fontSize: 20,
                                     fontWeight: FontWeight.bold,
-                                    fontFamily: "VarelaRound",
                                   ),
                                 ),
                               ),
@@ -336,7 +333,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
     );
   }
 }
-
 
 Widget _cardMenu({
   required String title,

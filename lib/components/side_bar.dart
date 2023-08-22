@@ -68,7 +68,7 @@ class SideBar extends StatelessWidget {
                             ),
                             SideMenuTile(
                               iconName: Icon(Icons.monetization_on, color: Colors.white),
-                              sideMenuOption: "Pay Dues - Omella",
+                              sideMenuOption: "Payments - Omella (Coming Soon)",
                             ),
                             SideMenuTile(
                               iconName: Icon(Icons.exit_to_app, color: Colors.white),
