@@ -1,11 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pgn_app/models/user.dart';
-import 'package:pgn_app/pages/home/home.dart';
-import 'package:pgn_app/shared/loading.dart';
 import 'package:provider/provider.dart';
-import 'package:pgn_app/components/info_card.dart';
-import 'package:rive/rive.dart' as rive;
 import 'package:pgn_app/components/side_menu_tile.dart';
 
 class SideBar extends StatelessWidget {

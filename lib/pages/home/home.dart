@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:pgn_app/components/side_bar.dart';
 import 'package:pgn_app/models/user.dart';
 import 'package:pgn_app/pages/home/story1page.dart';
@@ -8,7 +9,8 @@ import 'package:pgn_app/pages/home/story4page.dart';
 import 'package:pgn_app/services/auth.dart';
 import 'package:pgn_app/services/database.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter/painting.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 
 class Home extends StatefulWidget {
@@ -55,6 +57,14 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   void dispose() {
     _animationController.dispose();
     super.dispose();
+  }
+
+  void _launchURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 
   @override
@@ -237,6 +247,71 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                               ),
                             ),
                           ),
+                          Padding(
+                            padding: const EdgeInsets.all(30.0),
+                            child: Container(
+                              width: MediaQuery.of(context).size.width,
+                              height: MediaQuery.of(context).size.height * (1/3),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(16),
+                                color: Colors.indigo[50]!.withOpacity(0.8),
+                              ),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(vertical:20.0, horizontal: 20.0),
+                                    child: Text(
+                                      "Curious about learning more?",
+                                      style: GoogleFonts.coiny(
+                                        fontSize: 28,
+                                      ),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(horizontal: 50.0, vertical: 30.0),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        GestureDetector(
+                                          onTap: () => _launchURL('https://www.instagram.com/pgnmsu'),
+                                          child: FittedBox(
+                                            fit: BoxFit.contain,
+                                            child: SvgPicture.asset(
+                                              'assets/instagram.svg',
+                                              width: 40,
+                                              height: 40,
+                                            ),
+                                          ),
+                                        ),
+                                        GestureDetector(
+                                          onTap: () => _launchURL('https://www.linkedin.com/company/phigammanumsu'),
+                                          child: FittedBox(
+                                            fit: BoxFit.contain,
+                                            child: SvgPicture.asset(
+                                              'assets/linkedin.svg',
+                                              width: 40,
+                                              height: 40,
+                                            ),
+                                          ),
+                                        ),
+                                        GestureDetector(
+                                          onTap: () => _launchURL('https://www.pgnleaders.org/msu'),
+                                          child: SvgPicture.asset(
+                                            fit: BoxFit.contain,
+                                            'assets/website.svg',
+                                            width: 40,
+                                            height: 40,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          )
                         ],
                       ),
                     ),
