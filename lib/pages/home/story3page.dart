@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:pgn_app/Controllers/AnimationAppearController.dart';
 import 'package:pgn_app/pages/home/spotlightpages/spotlightpage1.dart';
 import 'package:pgn_app/pages/home/spotlightpages/spotlightpage2.dart';
 import 'package:pgn_app/pages/home/spotlightpages/spotlightpage3.dart';
@@ -8,6 +10,8 @@ import 'package:pgn_app/pages/home/spotlightpages/spotlightpage6.dart';
 import 'package:pgn_app/pages/home/spotlightpages/spotlightpage7.dart';
 import 'package:pgn_app/pages/home/spotlightpages/spotlightpage8.dart';
 import 'package:pgn_app/pages/home/spotlightpages/spotlightpage9.dart';
+import 'dart:async';
+import 'dart:math';
 
 class StoryPage3 extends StatefulWidget {
   const StoryPage3({super.key});
@@ -21,7 +25,6 @@ class _StoryPage3State extends State<StoryPage3> {
   List<String> images = ["ShreyaPeddi.png", "DakaraiYoung.png", "SamanthaChin.png",
                         "LukeBoldman.png", "OwenLee.png", "RahulRao.png",
                         "ShreyaPeddi.png", "JackieLee.png", "SamanthaChin.png" ];
-
 
   void _navigateToSpotlightPage(BuildContext context, int index) {
     Widget newPage;
@@ -84,7 +87,18 @@ class _StoryPage3State extends State<StoryPage3> {
                           )
                         ],
                       ),
-                      SizedBox(height: MediaQuery.of(context).size.height * (1/8)),
+                      SizedBox(height: MediaQuery.of(context).size.height * (1/32)),
+                      Container(
+                        width: MediaQuery.of(context).size.width - 100,
+                        child: Text(
+                          "Check Out Some of Our Members Providing Their Excellence Far and Wide",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.bangers(
+                            fontSize: 30,
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: MediaQuery.of(context).size.height * (1/32)),
                       Container(
                         width: double.infinity,
                         height: MediaQuery.of(context).size.height * (5/9),
@@ -105,11 +119,14 @@ class _StoryPage3State extends State<StoryPage3> {
                               onTap: () {
                                 _navigateToSpotlightPage(context, index);
                               },
-                              child: Container(
-                                margin: EdgeInsets.all(8),
-                                child: Image.asset(
-                                  "assets/${images[index]}",
-                                  fit: BoxFit.cover,
+                              child: AnimAppear(
+                                delay: (index + 1) * 300,
+                                child: Container(
+                                  margin: EdgeInsets.all(8),
+                                  child: Image.asset(
+                                    "assets/${images[index]}",
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
                               ),
                             );
@@ -124,3 +141,4 @@ class _StoryPage3State extends State<StoryPage3> {
     );
   }
 }
+

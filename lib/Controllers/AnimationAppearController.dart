@@ -45,10 +45,7 @@ class _AnimAppearState extends State<AnimAppear> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return FadeTransition(
-      child: SlideTransition(
-        position: _animOffset,
-        child: widget.child,
-      ),
+      child: widget.child,
       opacity: _animController,
     );
   }

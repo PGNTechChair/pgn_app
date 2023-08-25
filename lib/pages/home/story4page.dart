@@ -14,17 +14,6 @@ class StoryPage4 extends StatefulWidget {
 class _StoryPage4State extends State<StoryPage4> {
   @override
 
-  Widget _buildBulletPoint(String text) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Icon(Icons.arrow_circle_right, size: 15,),
-        SizedBox(width: 5.0),
-        Flexible(child: Text(text)),
-      ],
-    );
-  }
-
   void _launchURL(String url) async {
     if (await canLaunch(url)) {
       await launch(url);
