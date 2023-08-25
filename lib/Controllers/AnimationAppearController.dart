@@ -38,8 +38,8 @@ class _AnimAppearState extends State<AnimAppear> with TickerProviderStateMixin {
 
   @override
   void dispose() {
-    super.dispose();
     _animController.dispose();
+    super.dispose();
   }
 
   @override

@@ -120,7 +120,7 @@ class _StoryPage3State extends State<StoryPage3> {
                                 _navigateToSpotlightPage(context, index);
                               },
                               child: AnimAppear(
-                                delay: (index + 1) * 300,
+                                delay: Random().nextInt(5) * 400,
                                 child: Container(
                                   margin: EdgeInsets.all(8),
                                   child: Image.asset(
