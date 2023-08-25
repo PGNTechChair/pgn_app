@@ -18,8 +18,8 @@ class StoryPage3 extends StatefulWidget {
 
 class _StoryPage3State extends State<StoryPage3> {
 
-  List<String> images = ["ShreyaPeddi.png", "OwenLee.png", "SamanthaChin.png",
-                        "ShreyaPeddi.png", "OwenLee.png", "SamanthaChin.png",
+  List<String> images = ["ShreyaPeddi.png", "DakaraiYoung.png", "SamanthaChin.png",
+                        "LukeBoldman.png", "OwenLee.png", "RahulRao.png",
                         "ShreyaPeddi.png", "JackieLee.png", "SamanthaChin.png" ];
 
 
@@ -90,8 +90,8 @@ class _StoryPage3State extends State<StoryPage3> {
                         height: MediaQuery.of(context).size.height * (5/9),
                         decoration: BoxDecoration(
                           color: Colors.white38,
-                          border: Border.all(color: Colors.indigo[100]!, width: 5), // Inner gold border
-                          borderRadius: BorderRadius.circular(24)
+                          border: Border.all(color: Colors.indigo[100]!, width: 5),
+                          borderRadius: BorderRadius.circular(24),
                         ),
                         child: GridView.builder(
                           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

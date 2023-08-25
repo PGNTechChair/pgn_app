@@ -142,7 +142,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                     ),
                                   );
                                 },
-                                title: "Why Rush PGN?",
+                                title: "Why Join PGN?",
                                 width: MediaQuery.of(context).size.width - 100,
                                 height: MediaQuery.of(context).size.width - 100,
                                 icon: "assets/placeholderimage1.png"
@@ -160,7 +160,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                       ),
                                     );
                                   },
-                                  title: "Tips for Rushees",
+                                  title: "Tips for Recruitment",
                                   width: MediaQuery.of(context).size.width - 100,
                                   height: MediaQuery.of(context).size.width - 100,
                                   icon: "assets/placeholderimage2.png"
@@ -216,7 +216,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                   "PGN is a professional development organization for all majors…",
                                   textAlign: TextAlign.center,
                                   style: GoogleFonts.varelaRound(
-                                    color: Colors.amber,
+                                    color: Colors.amber[700],
                                     fontSize: 26,
                                     fontWeight: FontWeight.bold,
                                   ),
@@ -236,7 +236,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                   "…that believes there are clear steps, training and support networks that can mitigate underemployment and unemployment risk, and prepare graduates for a lifetime of success.",
                                   textAlign: TextAlign.center,
                                   style: GoogleFonts.varelaRound(
-                                    color: Colors.amber,
+                                    color: Colors.amber[700],
                                     fontSize: 20,
                                     fontWeight: FontWeight.bold,
                                   ),
@@ -365,7 +365,7 @@ Widget _cardMenu({
           ),
         ],
         border: Border.all(
-          color: Colors.amber,  // Use the gold color for the border
+          color: Colors.amber[700]!,  // Use the gold color for the border
           width: 10.0,          // Set the desired border width
         ),
       ),

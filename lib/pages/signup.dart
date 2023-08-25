@@ -23,7 +23,7 @@ class _SignUpState extends State<SignUp> {
   final _formKey = GlobalKey<FormState>();
   bool loading = false;
   final List<String> years = ['Freshman', 'Sophomore', 'Junior', 'Senior'];
-  final List<String> statuses = ['Member', 'Rushee', 'Guest'];
+  final List<String> statuses = ['PGN Member', 'Guest'];
 
 
   // text field state
