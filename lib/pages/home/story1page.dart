@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pgn_app/pages/home/reasonspages/community.dart';
+import 'package:pgn_app/pages/home/reasonspages/networking.dart';
+import 'package:pgn_app/pages/home/reasonspages/philanthropy.dart';
+import 'package:pgn_app/pages/home/reasonspages/professional.dart';
+import 'package:pgn_app/pages/home/reasonspages/social.dart';
 
 class StoryPage1 extends StatefulWidget {
   const StoryPage1({super.key});
@@ -39,6 +44,17 @@ class _StoryPage1State extends State<StoryPage1> {
                       ),
                     ),
                   ),
+                  SizedBox(height: MediaQuery.of(context).size.height * 1/32),
+                  Container(
+                    width: MediaQuery.of(context).size.width - 100,
+                    child: Text(
+                      "Click a Picture Below to Find Out About Them",
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.bangers(
+                        fontSize: 24,
+                      ),
+                    ),
+                  ),
                   SizedBox(height: MediaQuery.of(context).size.height * (1/16)),
                   Container(
                     width: MediaQuery.of(context).size.width- 100,
@@ -52,16 +68,27 @@ class _StoryPage1State extends State<StoryPage1> {
                     ),
                   ),
                   SizedBox(height: MediaQuery.of(context).size.height * (1/128)),
-                  Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(color: Colors.red[700]!, width: 3), // Inner gold border
-                        borderRadius: BorderRadius.circular(5)
-                    ),
-                    width: MediaQuery.of(context).size.width- 100,
-                    child: AspectRatio(
-                      aspectRatio: 16 / 9,
-                      child: Image.asset(
-                        "assets/ProfessionalSection.png",
+                  GestureDetector(
+                    onTap: () {
+                      // Navigate to a new page here
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Professional(), // Replace NewPage with your actual page
+                        ),
+                      );
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.red[700]!, width: 3), // Inner gold border
+                          borderRadius: BorderRadius.circular(5)
+                      ),
+                      width: MediaQuery.of(context).size.width- 100,
+                      child: AspectRatio(
+                        aspectRatio: 16 / 9,
+                        child: Image.asset(
+                          "assets/ProfessionalSection.png",
+                        ),
                       ),
                     ),
                   ),
@@ -78,16 +105,26 @@ class _StoryPage1State extends State<StoryPage1> {
                     ),
                   ),
                   SizedBox(height: MediaQuery.of(context).size.height * (1/128)),
-                  Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(color: Colors.blue[700]!, width: 3), // Inner gold border
-                        borderRadius: BorderRadius.circular(5)
-                    ),
-                    width: MediaQuery.of(context).size.width- 100,
-                    child: AspectRatio(
-                      aspectRatio: 16 / 9,
-                      child: Image.asset(
-                        "assets/SocialSection.png",
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Social(),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.blue[700]!, width: 3),
+                          borderRadius: BorderRadius.circular(5)
+                      ),
+                      width: MediaQuery.of(context).size.width- 100,
+                      child: AspectRatio(
+                        aspectRatio: 16 / 9,
+                        child: Image.asset(
+                          "assets/SocialSection.png",
+                        ),
                       ),
                     ),
                   ),
@@ -104,16 +141,27 @@ class _StoryPage1State extends State<StoryPage1> {
                     ),
                   ),
                   SizedBox(height: MediaQuery.of(context).size.height * (1/128)),
-                  Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(color: Colors.purple[700]!, width: 3), // Inner gold border
-                        borderRadius: BorderRadius.circular(5)
-                    ),
-                    width: MediaQuery.of(context).size.width- 100,
-                    child: AspectRatio(
-                      aspectRatio: 16 / 9,
-                      child: Image.asset(
-                        "assets/PhilanthropySection.png",
+                  GestureDetector(
+                    onTap: () {
+                      // Navigate to a new page here
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Philanthropy(),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.purple[700]!, width: 3),
+                          borderRadius: BorderRadius.circular(5)
+                      ),
+                      width: MediaQuery.of(context).size.width- 100,
+                      child: AspectRatio(
+                        aspectRatio: 16 / 9,
+                        child: Image.asset(
+                          "assets/PhilanthropySection.png",
+                        ),
                       ),
                     ),
                   ),
@@ -130,16 +178,27 @@ class _StoryPage1State extends State<StoryPage1> {
                     ),
                   ),
                   SizedBox(height: MediaQuery.of(context).size.height * (1/128)),
-                  Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(color: Colors.green[900]!, width: 3), // Inner gold border
-                        borderRadius: BorderRadius.circular(5)
-                    ),
-                    width: MediaQuery.of(context).size.width- 100,
-                    child: AspectRatio(
-                      aspectRatio: 16 / 9,
-                      child: Image.asset(
-                        "assets/NetworkingSection.png",
+                  GestureDetector(
+                    onTap: () {
+                      // Navigate to a new page here
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Networking(),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.green[900]!, width: 3),
+                          borderRadius: BorderRadius.circular(5)
+                      ),
+                      width: MediaQuery.of(context).size.width- 100,
+                      child: AspectRatio(
+                        aspectRatio: 16 / 9,
+                        child: Image.asset(
+                          "assets/NetworkingSection.png",
+                        ),
                       ),
                     ),
                   ),
@@ -156,16 +215,27 @@ class _StoryPage1State extends State<StoryPage1> {
                     ),
                   ),
                   SizedBox(height: MediaQuery.of(context).size.height * (1/128)),
-                  Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(color: Colors.amber[900]!, width: 3), // Inner gold border
-                        borderRadius: BorderRadius.circular(5)
-                    ),
-                    width: MediaQuery.of(context).size.width- 100,
-                    child: AspectRatio(
-                      aspectRatio: 16 / 9,
-                      child: Image.asset(
-                        "assets/CommunitySection.png",
+                  GestureDetector(
+                    onTap: () {
+                      // Navigate to a new page here
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Community(),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.amber[900]!, width: 3),
+                          borderRadius: BorderRadius.circular(5)
+                      ),
+                      width: MediaQuery.of(context).size.width - 100,
+                      child: AspectRatio(
+                        aspectRatio: 16 / 9,
+                        child: Image.asset(
+                          "assets/CommunitySection.png",
+                        ),
                       ),
                     ),
                   ),
