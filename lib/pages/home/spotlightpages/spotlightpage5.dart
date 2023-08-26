@@ -70,7 +70,7 @@ class _SpotlightPage5State extends State<SpotlightPage5> {
                         Container(
                           width: MediaQuery.of(context).size.width - 50,
                           child: Text(
-                            "Northwestern Mutual - Financial Analyst",
+                            "Northwestern Mutual - College Financial Representative",
                             textAlign: TextAlign.center,
                             style: GoogleFonts.bangers(
                               fontSize: 24,
@@ -97,7 +97,7 @@ class _SpotlightPage5State extends State<SpotlightPage5> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Unveiling Internship Insights: Seeking New Ways to Treat a Customer',
+                                'Unveiling Internship Insights: Putting Emphasis on Southern Hospitality',
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 16.0,
@@ -105,7 +105,7 @@ class _SpotlightPage5State extends State<SpotlightPage5> {
                               ),
                               SizedBox(height: 10.0), // Add spacing between title and content
                               Text(
-                                "Pursuing an early start for internships, upcoming Sophomore Samantha Chin, saught out the opportunity to achieve further growth in areas such as public speaking and presentations.",
+                                "A knowledgeable man keen for adventure landed his first internship as a freshman doing a combination of doing what he loves best, both financial advising and giving help to those who need advice."
                               ),
                               SizedBox(height: 10.0), // Add spacing between paragraphs
                               Text(
@@ -116,28 +116,28 @@ class _SpotlightPage5State extends State<SpotlightPage5> {
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),
-                                title: Text('Co-led a presentation committee which helped organize Lunch and Learn presentations for full-time employees '),
+                                title: Text("Developed an in-depth understanding of investment strategies, retirement plans, insurance products, and estate planning"),
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),
-                                title: Text("Achieved enchanced communication and leadership skills."),
+                                title: Text("Utilized his newly acquired skillset to create comprehensive financial plans catered to clients' financial well-being"),
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),
-                                title: Text("Utilized Microsoft applications such as Sharepoint to make website pages."),
+                                title: Text("Put the client center to his work every time no questions asked"),
                               ),
                               // Add more list tiles for other points
                               // ...
                               SizedBox(height: 10.0), // Add spacing
                               Text(
-                                "The tasks given by Blue Cross Blue Shield gave Samantha the perfect opportunity to perform using her Marketing major and Data Science minor.",
+                                "Coming into this internship with his front foot forward, Owen feels that he sees a future for himself in financial advising. Owen encourages all freshmen to apply for internships as no branch is too high too reach no matter your standing.",
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
                                 ),
                               ),
                               SizedBox(height: 10.0), // Add final spacing
                               Text(
-                                "In her free time, Samantha enjoys reading, watching and playing soccer, watching YouTube, and kayaking.",
+                                "A day not lived in the gym is a day not living for Owen. Whether if hes in school or exercising, there are always gains to be made. Owen also enjoys fishing in his spare time.",
                                 style: TextStyle(
                                   color: Colors.grey,
                                 ),

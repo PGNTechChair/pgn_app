@@ -97,7 +97,7 @@ class _SpotlightPage4State extends State<SpotlightPage4> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Unveiling Internship Insights: Seeking New Ways to Treat a Customer',
+                                'Unveiling Internship Insights: Growing from his Roots',
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 16.0,
@@ -105,7 +105,7 @@ class _SpotlightPage4State extends State<SpotlightPage4> {
                               ),
                               SizedBox(height: 10.0), // Add spacing between title and content
                               Text(
-                                "Pursuing an early start for internships, upcoming Sophomore Samantha Chin, saught out the opportunity to achieve further growth in areas such as public speaking and presentations.",
+                                "A story started at a PGN meeting, rising junior Luke Boldman became intrigued after a company presentation from Techsmith. After discussing the company with a few other brothers who had interned there, Luke felt that he would be a good fit for the business.\n\nLuke cites that his pledge semester prepared him tremendously with his journey applying to Techsmith from resume workshops to the various interview preparation events that were provided to him.",
                               ),
                               SizedBox(height: 10.0), // Add spacing between paragraphs
                               Text(
@@ -116,28 +116,28 @@ class _SpotlightPage4State extends State<SpotlightPage4> {
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),
-                                title: Text('Co-led a presentation committee which helped organize Lunch and Learn presentations for full-time employees '),
+                                title: Text("Collaborated with engineers to test UI changes of several applications."),
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),
-                                title: Text("Achieved enchanced communication and leadership skills."),
+                                title: Text("Expanded his sales encounters internationally to places like the United Kingdom, India, and Australia."),
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),
-                                title: Text("Utilized Microsoft applications such as Sharepoint to make website pages."),
+                                title: Text("Performed data analytics that aided employees to seek insights about the company."),
                               ),
                               // Add more list tiles for other points
                               // ...
                               SizedBox(height: 10.0), // Add spacing
                               Text(
-                                "The tasks given by Blue Cross Blue Shield gave Samantha the perfect opportunity to perform using her Marketing major and Data Science minor.",
+                                "Luke rose to the challenge throughout his internship. He wanted to feel the real life implications of wins and losses. Through his hard work, he was able to gain this experience and thus set the framework for his next steps as a qualified businessman",
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
                                 ),
                               ),
                               SizedBox(height: 10.0), // Add final spacing
                               Text(
-                                "In her free time, Samantha enjoys reading, watching and playing soccer, watching YouTube, and kayaking.",
+                                "Also widely known for his cooking skills throughout PGN, with a taste of music and reading a variety of novels, Luke knows well how to a relaxing break from his daily pursuits.",
                                 style: TextStyle(
                                   color: Colors.grey,
                                 ),

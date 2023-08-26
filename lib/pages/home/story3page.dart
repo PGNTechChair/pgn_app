@@ -24,7 +24,7 @@ class _StoryPage3State extends State<StoryPage3> {
 
   List<String> images = ["ShreyaPeddi.png", "DakaraiYoung.png", "SamanthaChin.png",
                         "LukeBoldman.png", "OwenLee.png", "RahulRao.png",
-                        "ShreyaPeddi.png", "JackieLee.png", "SamanthaChin.png" ];
+                        "ShreyaParepally.png", "JackieLee.png", "AlyseBelkin.png" ];
 
   void _navigateToSpotlightPage(BuildContext context, int index) {
     Widget newPage;
