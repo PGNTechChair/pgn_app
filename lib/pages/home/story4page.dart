@@ -223,7 +223,7 @@ class _StoryPage4State extends State<StoryPage4> {
                           ),
                         ),
                       ),
-
+                      SizedBox(height: MediaQuery.of(context).size.height * (1/64)),
                     ],
                   ),
               ),

@@ -48,7 +48,7 @@ class _CommunityState extends State<Community> with SingleTickerProviderStateMix
 
     _controller = AnimationController(
       vsync: this,
-      duration: Duration(seconds: 25),
+      duration: Duration(seconds: 30),
     )..addListener(() {
       setState(() {
         // Update the current index based on animation value
