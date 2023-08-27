@@ -248,7 +248,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                             padding: const EdgeInsets.all(30.0),
                             child: Container(
                               width: MediaQuery.of(context).size.width,
-                              height: MediaQuery.of(context).size.height * (1/3),
+                              height: MediaQuery.of(context).size.height * (1 / 4),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(16),
                                 color: Colors.indigo[50]!.withOpacity(0.8),
@@ -257,7 +257,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Padding(
-                                    padding: const EdgeInsets.symmetric(vertical:20.0, horizontal: 20.0),
+                                    padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 20.0),
                                     child: Text(
                                       "Curious about learning more?",
                                       style: GoogleFonts.coiny(
@@ -266,37 +266,31 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                       textAlign: TextAlign.center,
                                     ),
                                   ),
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(horizontal: 50.0, vertical: 30.0),
+                                  // Use Expanded widget to center the SVG assets vertically and distribute remaining space
+                                  Expanded(
                                     child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                      crossAxisAlignment: CrossAxisAlignment.center,
                                       children: [
                                         GestureDetector(
                                           onTap: () => _launchURL('https://www.instagram.com/pgnmsu'),
-                                          child: FittedBox(
-                                            fit: BoxFit.contain,
-                                            child: SvgPicture.asset(
-                                              'assets/instagram.svg',
-                                              width: 40,
-                                              height: 40,
-                                            ),
+                                          child: SvgPicture.asset(
+                                            'assets/instagram.svg',
+                                            width: 40,
+                                            height: 40,
                                           ),
                                         ),
                                         GestureDetector(
                                           onTap: () => _launchURL('https://www.linkedin.com/company/phigammanumsu'),
-                                          child: FittedBox(
-                                            fit: BoxFit.contain,
-                                            child: SvgPicture.asset(
-                                              'assets/linkedin.svg',
-                                              width: 40,
-                                              height: 40,
-                                            ),
+                                          child: SvgPicture.asset(
+                                            'assets/linkedin.svg',
+                                            width: 40,
+                                            height: 40,
                                           ),
                                         ),
                                         GestureDetector(
                                           onTap: () => _launchURL('https://www.pgnleaders.org/msu'),
                                           child: SvgPicture.asset(
-                                            fit: BoxFit.contain,
                                             'assets/website.svg',
                                             width: 40,
                                             height: 40,
