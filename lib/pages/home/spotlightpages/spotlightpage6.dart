@@ -105,7 +105,7 @@ class _SpotlightPage6State extends State<SpotlightPage6> {
                               ),
                               SizedBox(height: 10.0), // Add spacing between title and content
                               Text(
-                                "Rahul is a man of many talents. Rather if its building structures with his woodworking skills, practicing archery, or learning French as a second language, Rahul is always pursuing something new that interests him. This curiousity extends to both MSU and his internship where he used his marketing skills from his prior Marketing major and now procurement focus from his Supply Chain major.",
+                                "Rahul is a man of many talents. Rather if its building structures with his woodworking skills, practicing archery, or learning French as a second language, Rahul is always pursuing something new that interests him. This curiousity extends to both MSU and his internship where he used his marketing skills from his prior Marketing major, and now, procurement focus from his Supply Chain major.",
                                 style: TextStyle(fontSize: 16),
                               ),
                               SizedBox(height: 10.0), // Add spacing between paragraphs
@@ -127,7 +127,7 @@ class _SpotlightPage6State extends State<SpotlightPage6> {
                               // ...
                               SizedBox(height: 10.0), // Add spacing
                               Text(
-                                "Rahul emphasizes that the most important thing with internships is to start early. Whether if the context means you are a freshmen or if it considered to be the beginning of the school year. Grant yourself the ability to relax after you get that golden ticket to the company of your dream.",
+                                "Rahul emphasizes that the most important thing with internships is to start early. Whether if the context means you are a freshmen or if it's considered to be the beginning of the school year. Grant yourself the ability to relax after you get that golden ticket to the company of your dream.",
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
                                 ),

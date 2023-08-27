@@ -186,7 +186,7 @@ class _StoryPage4State extends State<StoryPage4> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'With his passion for engagement and creative podcast ideas, David is all geared up for an enriching semester ahead.',
+                                'With his passion for new and creative podcast ideas, David is all geared up for an enriching semester ahead.',
                                 style: GoogleFonts.montserrat(
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,

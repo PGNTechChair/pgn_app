@@ -105,7 +105,7 @@ class _SpotlightPage5State extends State<SpotlightPage5> {
                               ),
                               SizedBox(height: 10.0), // Add spacing between title and content
                               Text(
-                                "A knowledgeable man keen for adventure landed his first internship as a freshman doing a combination of doing what he loves best, both financial advising and giving help to those who need advice.",
+                                "A knowledgeable man keen for adventure landed his first internship as a freshman doing a combination of doing what he loves best, financial advising and giving help to those who need advice.",
                                 style: TextStyle(fontSize: 16),
                               ),
                               SizedBox(height: 10.0), // Add spacing between paragraphs
@@ -138,7 +138,7 @@ class _SpotlightPage5State extends State<SpotlightPage5> {
                               ),
                               SizedBox(height: 10.0), // Add final spacing
                               Text(
-                                "A day not lived in the gym is a day not living for Owen. Whether if hes in school or exercising, there are always gains to be made. Owen also enjoys fishing in his spare time.",
+                                "A day not lived in the gym is a day not lived for Owen. Whether if hes in school or exercising, there are always gains to be made. Owen also enjoys fishing in his spare time.",
                                 style: TextStyle(
                                   color: Colors.grey,
                                 ),

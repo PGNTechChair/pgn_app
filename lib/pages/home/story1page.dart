@@ -302,7 +302,7 @@ class _StoryPage1State extends State<StoryPage1> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'PGN has given me the opportunity to develop not just as a professional, but also as a person. I personally dealt with a rapidly changing environment around me coming into college. PGN helped me adjust to this change. Albeit the pledge semester was difficult and even being president has its challenges, but I would be nowhere near where I am today if it wasn\'t for the amazing upperclassmen that raised a professional out of me along with the amazing support system I have today.',
+                            'PGN has given me the opportunity to develop not just as a professional, but also as a person. I personally dealt with a rapidly changing environment around me coming into college. PGN helped me adjust to this change. Albeit the pledge semester was difficult and even being president has its challenges, but I would be nowhere near where I am today if it wasn\'t for the amazing upperclassmen that raised a professional out of me along with the amazing support system I have now.',
                             style: GoogleFonts.montserrat(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
@@ -318,7 +318,7 @@ class _StoryPage1State extends State<StoryPage1> {
                           ),
                           SizedBox(height: 10.0),
                           Text(
-                            "\nI hope that I can prove to you that PGN fosters both creative and innovative ideas of all its members. We will enable your ideas to flourish into fruition by providing a variety of workshops, along with helpful and meaningful connections that can be utilized to tackle the often scary unknowns of college life.",
+                            "\nI hope that I can prove to you that PGN fosters both creative and innovative ideas for all its members. We will enable your ideas to flourish into fruition by providing a variety of workshops, along with helpful and meaningful connections that can be utilized to tackle the tasks necessary.",
                             style: GoogleFonts.montserrat(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,

@@ -62,7 +62,7 @@ class _PhilanthropyState extends State<Philanthropy> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Even though we wish to help each other within the organization, we definitely care for the world around us. We make it a goal for PGN to have a substantial impact on the community around us. Whether if it raising funds for Anastasia and Katie's Coffee Shop through our notorious Pi Gamma Nu event where brothers simply just pie each other in the face!",
+                          "Even though we wish to help each other within the organization, we definitely care for the world around us. We make it a goal for PGN to have a substantial impact on the community. Our philanthropy events always have a hint of creativity to them such as raising funds for Anastasia and Katie's Coffee Shop through our notorious Pi Gamma Nu event or spending time with the youth carving pumpkins!",
                           style: GoogleFonts.montserrat(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,

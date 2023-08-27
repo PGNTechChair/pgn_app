@@ -121,13 +121,13 @@ class _SpotlightPage9State extends State<SpotlightPage9> {
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),
-                                title: Text("Became equiped with a comprehensive understanding of the world of Big 4 Finance and Accounting."),
+                                title: Text("Became equipped with a comprehensive understanding of the world of Big 4 Finance and Accounting."),
                               ),
                               // Add more list tiles for other points
                               // ...
                               SizedBox(height: 10.0), // Add spacing
                               Text(
-                                "Alyse refers to PGN as a central player in her success securing the Deloitte internship and prospering through the eight week program, Whether if it was through her two hour mock interview with her pledge educator or guidance from our alumni network.",
+                                "Alyse refers to PGN as a central player in her success securing the Deloitte internship and prospering through the eight week program. Whether if it was through her two hour mock interview with her pledge educator or guidance from our alumni network.",
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
                                 ),

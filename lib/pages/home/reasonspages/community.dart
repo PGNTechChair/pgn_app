@@ -163,7 +163,7 @@ class _CommunityState extends State<Community> with SingleTickerProviderStateMix
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Every semester, pledges get initiated within the many families that reside within the organization. Above is our White Tooth Shrew family (Jeremy Kim, Luke Boldman, & Neel Chandran) welcoming two new members (Matt Welmerink & Victoria Nweze) alongside to the future development of their family. These families serve as sub-communities to help brothers grow closer to one another through PGN events or through their own means.",
+                          "Every semester, pledges get initiated into one of the many families that reside within the organization. Above is our White Tooth Shrew family (Jeremy Kim, Luke Boldman, & Neel Chandran) welcoming two new members (Matt Welmerink & Victoria Nweze) alongside to the future development of their family. These families serve as sub-communities to help brothers grow closer to one another through PGN events or through their own means.",
                           style: GoogleFonts.montserrat(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
@@ -171,7 +171,7 @@ class _CommunityState extends State<Community> with SingleTickerProviderStateMix
                         ),
                         SizedBox(height: 10.0),
                         Text(
-                          '\nThe PGN emphasis on community doesn\'t just reside in the meeting room, but also in the Minskoff Pavilion, outside at MSU events, and even after graduation where we aim to stay tightly connected with our alumni. PGN aims to create a journey for its members that lasts a lifetime.',
+                          '\nThe PGN emphasis on community doesn\'t just reside in the meeting room, but also in the Minskoff Pavilion, outside at MSU events, and even after graduation where we aim to stay tightly connected with our alumni. PGN aspires to create a journey for its members that lasts a lifetime.',
                           style: GoogleFonts.montserrat(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,

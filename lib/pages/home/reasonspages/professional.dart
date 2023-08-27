@@ -192,7 +192,7 @@ class _ProfessionalState extends State<Professional> {
                         ListTile(
                           leading: Icon(Icons.pending_actions, color: Colors.pink,),
                           title: Text(
-                            'Interview Preperation',
+                            'Interview Preparation',
                             style: GoogleFonts.playfairDisplay(
                               fontSize: 15,
                               fontWeight: FontWeight.bold,
@@ -226,14 +226,14 @@ class _ProfessionalState extends State<Professional> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "The journey to professionalism doesn't just end there though. PGN offers may opportunities after the pledge semester for people to grow with the plethora of chair positions to choose from. PGN also values creativity and innovation, so if you decide you want to create a new chair that would help benefit the organization, all ears will be open to you! Some may even choose to serve on E-Board and help run the organization for a year's time.",
+                          "The journey to professionalism doesn't just end there though. PGN offers many opportunities after the pledge semester for people to grow with the plethora of chair positions to choose from. PGN also values creativity and innovation, so if you decide you want to create a new chair that would help benefit the organization, all ears will be open to you! Some may even choose to serve on E-Board and help run the organization for a year's time.",
                           style: GoogleFonts.montserrat(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         Text(
-                          "\nIn all, PGN hopes to gives you the aid necessary to present it's members with a bright future.",
+                          "\nIn all, PGN hopes to gives the aid necessary to present its members with a bright future.",
                           style: GoogleFonts.montserrat(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,

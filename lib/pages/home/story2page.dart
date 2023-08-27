@@ -52,7 +52,7 @@ class _StoryPage2State extends State<StoryPage2> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'When it comes to most of our recruitment advice, it usually depends on the individual for what works best. Although, there are always some basic rules of thumb that come with showing off your best off.',
+                                'When it comes to most of our recruitment advice, it usually depends on the individual for what works best. Although, there are always some basic rules of thumb that come with showing off your best self.',
                                 style: GoogleFonts.montserrat(
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,
@@ -180,7 +180,7 @@ class _StoryPage2State extends State<StoryPage2> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                "It should also be emphasized that professional wear is highly encouraged. For the final interview and speed dating is typically where you would be wearing them. For men, this would be a suit and dress pants. For females this would be a dress or a suit with dress pants. Dress shoes are also an important part of the attire. More information on attire will be given during our info nights.",
+                                "It should also be emphasized that professional wear is highly encouraged. For the final interview and speed dating, this is typically where you would be wearing them. For men, this could be a suit and dress pants. For females this could be a dress or a suit with dress pants. Dress shoes are also an important part of the attire. More information on attire will be given during our info nights.",
                                 style: GoogleFonts.montserrat(
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,

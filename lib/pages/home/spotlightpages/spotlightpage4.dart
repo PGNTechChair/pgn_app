@@ -131,14 +131,14 @@ class _SpotlightPage4State extends State<SpotlightPage4> {
                               // ...
                               SizedBox(height: 10.0), // Add spacing
                               Text(
-                                "Luke rose to the challenge throughout his internship. He wanted to feel the real life implications of wins and losses. Through his hard work, he was able to gain this experience and thus set the framework for his next steps as a qualified businessman",
+                                "Luke rose to the challenge throughout his internship. He wanted to feel the real life implications of wins and losses. Through his hard work, he was able to gain this experience and thus set the framework for his next steps as a qualified businessman.",
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
                                 ),
                               ),
                               SizedBox(height: 10.0), // Add final spacing
                               Text(
-                                "Also widely known for his cooking skills throughout PGN, with a taste of music and reading a variety of novels, Luke knows well how to a relaxing break from his daily pursuits.",
+                                "Also widely known for his cooking skills throughout PGN, with a taste of music and reading a variety of novels, Luke knows well how to take a relaxing break from his daily pursuits.",
                                 style: TextStyle(
                                   color: Colors.grey,
                                 ),

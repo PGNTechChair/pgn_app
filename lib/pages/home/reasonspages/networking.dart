@@ -66,7 +66,7 @@ class _NetworkingState extends State<Networking> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Provided above, it is easy to see that our leaders of tomorrow have reached great heights. There are plenty more companies that brothers reside at, but then you would be scrolling for quite a bit!",
+                          "Provided above, it is easy to see that our leaders of tomorrow have reached great heights. There are plenty more companies that brothers reside at that we can show, but then you would be scrolling for quite a bit!",
                           style: GoogleFonts.montserrat(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,

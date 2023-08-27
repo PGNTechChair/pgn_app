@@ -121,11 +121,11 @@ class _SpotlightPage7State extends State<SpotlightPage7> {
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),
-                                title: Text("Sent out phishing emails to employees of the company to test the awareness of the staff to scam emails."),
+                                title: Text("Sent out phishing emails to employees of the company to test the awareness of the staff regarding scam emails."),
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),
-                                title: Text("Shadowed different positions of the company to broaden her view of the company's impact"),
+                                title: Text("Shadowed different positions of the company to broaden her view of the company's direction"),
                               ),
                               // Add more list tiles for other points
                               // ...

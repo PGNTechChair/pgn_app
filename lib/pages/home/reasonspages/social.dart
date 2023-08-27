@@ -62,7 +62,7 @@ class _SocialState extends State<Social> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "When not on the school grind, our PGN members certainly know how to get outside and soak in the college experience. Whether if its taking a winter adventure to the ski hills up north or going out for the St. Patty's Darty, our group takes every event as moment to build their relationships with one another.",
+                          "When not on the school grind, our PGN members certainly know how to get outside and soak in the college experience. Whether if its taking a winter adventure to the ski hills up north or going out for the St. Patty's Darty, our group takes every event as a moment to build their relationships with one another.",
                           style: GoogleFonts.montserrat(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
@@ -70,7 +70,7 @@ class _SocialState extends State<Social> {
                         ),
                         SizedBox(height: 10.0),
                         Text(
-                          "PGN also hosts plenty of fun events for its members and pledges. Including board game tournaments, movie nights,and holiday parties!",
+                          "PGN also hosts plenty of fun events for its members and pledges including board game tournaments, movie nights, and holiday parties!",
                           style: GoogleFonts.montserrat(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
