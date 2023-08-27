@@ -66,6 +66,76 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
     }
   }
 
+  Widget _cardMenu({
+    required String title,
+    required String icon,
+    required double width,
+    required double height,
+    required double fontsize,
+    VoidCallback? onTap,
+  }) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: width,
+        height: height,
+        constraints: BoxConstraints(maxHeight: height),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(5),
+          gradient: LinearGradient(
+            colors: [Colors.indigo[50]!, Colors.white70!],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.3),
+              spreadRadius: 10,
+              blurRadius: 5,
+              offset: Offset(0, 5),
+            ),
+          ],
+          border: Border.all(
+            color: Colors.amber[700]!,
+            width: 10.0,
+          ),
+        ),
+        child: Stack(
+          children: [
+            Positioned.fill(
+              child: Image.asset(
+                icon,
+                fit: BoxFit.cover,
+              ),
+            ),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(45),
+                    color: Colors.white.withOpacity(.8),
+                  ),
+                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  child: Text(
+                    title,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: fontsize,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xFF800000),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     String? uid = Provider.of<NewUser?>(context)?.uid;
@@ -145,7 +215,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                 title: "Why Join PGN?",
                                 width: MediaQuery.of(context).size.width - 100,
                                 height: MediaQuery.of(context).size.width - 100,
-                                icon: "assets/placeholderimage1.png"
+                                icon: "assets/StoryImage1.png",
+                                  fontsize: 30
                               ),
                             ],
                           ),
@@ -163,7 +234,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                   title: "Tips for Recruitment",
                                   width: MediaQuery.of(context).size.width - 100,
                                   height: MediaQuery.of(context).size.width - 100,
-                                  icon: "assets/placeholderimage2.png"
+                                  icon: "assets/StoryImage2.png",
+                                  fontsize: 28
                               ),
                             ],
                           ),
@@ -181,7 +253,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                   title: "Member Internship Spotlight",
                                   width: MediaQuery.of(context).size.width - 100,
                                   height: MediaQuery.of(context).size.width - 100,
-                                  icon: "assets/placeholderimage3.png"
+                                  icon: "assets/StoryImage3.png",
+                                  fontsize: 24
                               ),
                             ],
                           ),
@@ -199,7 +272,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                   title: "Watch Our Podcast",
                                   width: MediaQuery.of(context).size.width - 100,
                                   height: MediaQuery.of(context).size.width - 100,
-                                  icon: "assets/placeholderimage4.png"
+                                  icon: "assets/StoryImage4.png",
+                                  fontsize: 26
                               ),
                             ],
                           ),
@@ -328,56 +402,3 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   }
 }
 
-Widget _cardMenu({
-  required String title,
-  required String icon,
-  required double width,
-  required double height,
-  VoidCallback? onTap,
-  Color fontColor = Colors.red,
-}) {
-  return GestureDetector(
-    onTap: onTap,
-    child: Container(
-      padding: const EdgeInsets.only(bottom: 5, top: 18),
-      width: width,
-      height: height,
-      constraints: BoxConstraints(maxHeight: height),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(24),
-        gradient: LinearGradient(
-          colors: [Colors.indigo[50]!, Colors.white70!],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.3),
-            spreadRadius: 10,
-            blurRadius: 5,
-            offset: Offset(0, 5),
-          ),
-        ],
-        border: Border.all(
-          color: Colors.amber[700]!,  // Use the gold color for the border
-          width: 10.0,          // Set the desired border width
-        ),
-      ),
-      child: Column(
-        children: [
-          Image.asset(icon, width: width / 2, height: height / 2),
-          SizedBox(height: height / 8),
-          Text(
-            textAlign: TextAlign.center,
-            title,
-            style: TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.bold,
-              color: fontColor
-            ),
-          ),
-        ],
-      ),
-    ),
-  );
-}
