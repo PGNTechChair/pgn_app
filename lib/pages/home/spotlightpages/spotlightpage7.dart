@@ -17,10 +17,10 @@ class _SpotlightPage7State extends State<SpotlightPage7> {
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                Color(0x007DB8).withOpacity(.5),
-                Color(0x0E0E0E).withOpacity(.5),
-                Color(0x007DB8).withOpacity(.5),
-                Color(0x0E0E0E).withOpacity(.5),
+                Color(0x007DB8).withOpacity(.75),
+                Color(0xffffff).withOpacity(.5),
+                Color(0x007DB8).withOpacity(.75),
+                Color(0xffffff).withOpacity(.5),
               ],
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
@@ -70,7 +70,7 @@ class _SpotlightPage7State extends State<SpotlightPage7> {
                         Container(
                           width: MediaQuery.of(context).size.width - 50,
                           child: Text(
-                            "Dell - Cybersecurity Consultant",
+                            "HALOCK Security Labs - Cybersecurity Consultant",
                             textAlign: TextAlign.center,
                             style: GoogleFonts.bangers(
                               fontSize: 24,
@@ -106,6 +106,7 @@ class _SpotlightPage7State extends State<SpotlightPage7> {
                               SizedBox(height: 10.0), // Add spacing between title and content
                               Text(
                                 "Pursuing an early start for internships, upcoming Sophomore Samantha Chin, saught out the opportunity to achieve further growth in areas such as public speaking and presentations.",
+                                style: TextStyle(fontSize: 16),
                               ),
                               SizedBox(height: 10.0), // Add spacing between paragraphs
                               Text(

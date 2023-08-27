@@ -106,6 +106,7 @@ class _SpotlightPage2State extends State<SpotlightPage2> {
                               SizedBox(height: 10.0), // Add spacing between title and content
                               Text(
                                 "Pursuing an early start for internships, upcoming Sophomore Samantha Chin, saught out the opportunity to achieve further growth in areas such as public speaking and presentations.",
+                                style: TextStyle(fontSize: 16),
                               ),
                               SizedBox(height: 10.0), // Add spacing between paragraphs
                               Text(

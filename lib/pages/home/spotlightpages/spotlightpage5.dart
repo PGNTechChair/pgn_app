@@ -105,7 +105,8 @@ class _SpotlightPage5State extends State<SpotlightPage5> {
                               ),
                               SizedBox(height: 10.0), // Add spacing between title and content
                               Text(
-                                "A knowledgeable man keen for adventure landed his first internship as a freshman doing a combination of doing what he loves best, both financial advising and giving help to those who need advice."
+                                "A knowledgeable man keen for adventure landed his first internship as a freshman doing a combination of doing what he loves best, both financial advising and giving help to those who need advice.",
+                                style: TextStyle(fontSize: 16),
                               ),
                               SizedBox(height: 10.0), // Add spacing between paragraphs
                               Text(

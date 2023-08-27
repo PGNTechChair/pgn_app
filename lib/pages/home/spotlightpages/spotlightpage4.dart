@@ -106,6 +106,7 @@ class _SpotlightPage4State extends State<SpotlightPage4> {
                               SizedBox(height: 10.0), // Add spacing between title and content
                               Text(
                                 "A story started at a PGN meeting, rising junior Luke Boldman became intrigued after a company presentation from Techsmith. After discussing the company with a few other brothers who had interned there, Luke felt that he would be a good fit for the business.\n\nLuke cites that his pledge semester prepared him tremendously with his journey applying to Techsmith from resume workshops to the various interview preparation events that were provided to him.",
+                                style: TextStyle(fontSize: 16),
                               ),
                               SizedBox(height: 10.0), // Add spacing between paragraphs
                               Text(

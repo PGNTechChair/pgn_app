@@ -97,7 +97,7 @@ class _SpotlightPage6State extends State<SpotlightPage6> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Unveiling Internship Insights: Seeking New Ways to Treat a Customer',
+                                'Unveiling Internship Insights: Dual-Wielding Talents at the Workplace',
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 16.0,
@@ -105,7 +105,8 @@ class _SpotlightPage6State extends State<SpotlightPage6> {
                               ),
                               SizedBox(height: 10.0), // Add spacing between title and content
                               Text(
-                                "Pursuing an early start for internships, upcoming Sophomore Samantha Chin, saught out the opportunity to achieve further growth in areas such as public speaking and presentations.",
+                                "Rahul is a man of many talents. Rather if its building structures with his woodworking skills, practicing archery, or learning French as a second language, Rahul is always pursuing something new that interests him. This curiousity extends to both MSU and his internship where he used his marketing skills from his prior Marketing major and now procurement focus from his Supply Chain major.",
+                                style: TextStyle(fontSize: 16),
                               ),
                               SizedBox(height: 10.0), // Add spacing between paragraphs
                               Text(
@@ -116,28 +117,24 @@ class _SpotlightPage6State extends State<SpotlightPage6> {
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),
-                                title: Text('Co-led a presentation committee which helped organize Lunch and Learn presentations for full-time employees '),
+                                title: Text("Managed multi-million dollar projects dedicated to advertising strategies on major websites."),
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),
-                                title: Text("Achieved enchanced communication and leadership skills."),
-                              ),
-                              ListTile(
-                                leading: Icon(Icons.check_circle, color: Colors.green),
-                                title: Text("Utilized Microsoft applications such as Sharepoint to make website pages."),
+                                title: Text("Took part in negotiation meetings where budget spending was discussed for the company."),
                               ),
                               // Add more list tiles for other points
                               // ...
                               SizedBox(height: 10.0), // Add spacing
                               Text(
-                                "The tasks given by Blue Cross Blue Shield gave Samantha the perfect opportunity to perform using her Marketing major and Data Science minor.",
+                                "Rahul emphasizes that the most important thing with internships is to start early. Whether if the context means you are a freshmen or if it considered to be the beginning of the school year. Grant yourself the ability to relax after you get that golden ticket to the company of your dream.",
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
                                 ),
                               ),
                               SizedBox(height: 10.0), // Add final spacing
                               Text(
-                                "In her free time, Samantha enjoys reading, watching and playing soccer, watching YouTube, and kayaking.",
+                                "On top of everyting else, Rahul has a smile and attitude that can brighten any room. His care for those around him makes him truly show genuine compassion and selflessness, qualities that inspire and uplift everyone fortunate enough to know him.",
                                 style: TextStyle(
                                   color: Colors.grey,
                                 ),

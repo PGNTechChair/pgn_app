@@ -326,7 +326,7 @@ class _StoryPage1State extends State<StoryPage1> {
                           ),
                           SizedBox(height: 10.0),
                           Text(
-                            "\nIf you have reached this far in my note, thank you for taking the time to learn more about our organization. I hope we can leave as much an impact on you as it has on me.",
+                            "\nIf you have reached this far in my note, thank you for taking the time to learn more about our organization. I hope we can leave as much an impact on you as PGN has had on me.",
                             style: GoogleFonts.montserrat(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
