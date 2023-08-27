@@ -338,6 +338,7 @@ class _SignUpState extends State<SignUp> {
                       width: MediaQuery.of(context).size.width * (300/411.4),
                       height: MediaQuery.of(context).size.height * (80/683.4),
                       child: TextFormField(
+                        obscureText: true,
                         validator: (String? val) {
                           if (val != null && val.length < 6)
                           {
