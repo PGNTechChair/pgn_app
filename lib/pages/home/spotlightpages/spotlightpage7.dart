@@ -97,7 +97,7 @@ class _SpotlightPage7State extends State<SpotlightPage7> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Unveiling Internship Insights: Protecting ',
+                                'Unveiling Internship Insights: Protecting the City One Client at a Time',
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 16.0,
@@ -105,7 +105,7 @@ class _SpotlightPage7State extends State<SpotlightPage7> {
                               ),
                               SizedBox(height: 10.0), // Add spacing between title and content
                               Text(
-                                "Pursuing an early start for internships, upcoming Sophomore Samantha Chin, saught out the opportunity to achieve further growth in areas such as public speaking and presentations.",
+                                "With the rising occurence of cyber crimes, the city of Schaumburg needed a hero... One to fight off the criminals of the web. Shreya has risen to this challenge and fights for the businesses around her to keep them safe and functional!",
                                 style: TextStyle(fontSize: 16),
                               ),
                               SizedBox(height: 10.0), // Add spacing between paragraphs
@@ -117,28 +117,28 @@ class _SpotlightPage7State extends State<SpotlightPage7> {
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),
-                                title: Text('Co-led a presentation committee which helped organize Lunch and Learn presentations for full-time employees '),
+                                title: Text("Consulted with several small businesses about best security practices"),
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),
-                                title: Text("Achieved enchanced communication and leadership skills."),
+                                title: Text("Sent out phishing emails to employees of the company to test the awareness of the staff to scam emails."),
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),
-                                title: Text("Utilized Microsoft applications such as Sharepoint to make website pages."),
+                                title: Text("Shadowed different positions of the company to broaden her view of the company's impact"),
                               ),
                               // Add more list tiles for other points
                               // ...
                               SizedBox(height: 10.0), // Add spacing
                               Text(
-                                "The tasks given by Blue Cross Blue Shield gave Samantha the perfect opportunity to perform using her Marketing major and Data Science minor.",
+                                "Shreya sparked her interest of cybersecurity during the pandemic and found joy in the field. She has since started her degree in Computer Science and will be a rising Sophomore.",
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
                                 ),
                               ),
                               SizedBox(height: 10.0), // Add final spacing
                               Text(
-                                "In her free time, Samantha enjoys reading, watching and playing soccer, watching YouTube, and kayaking.",
+                                "When there is time to spare, Shreya enjoys making websites, drawing art, and to get outside and play some games of pickelball.",
                                 style: TextStyle(
                                   color: Colors.grey,
                                 ),
