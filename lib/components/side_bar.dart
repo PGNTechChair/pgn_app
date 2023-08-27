@@ -1,12 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pgn_app/models/user.dart';
-import 'package:pgn_app/pages/home.dart';
-import 'package:pgn_app/shared/loading.dart';
 import 'package:provider/provider.dart';
-import 'package:pgn_app/services/info_card.dart';
-import 'package:rive/rive.dart' as rive;
-import "package:pgn_app/services/side_menu_tile.dart";
+import 'package:pgn_app/components/side_menu_tile.dart';
 
 class SideBar extends StatelessWidget {
 
@@ -34,7 +30,7 @@ class SideBar extends StatelessWidget {
               body: SafeArea(
                 child: Drawer(
                   child: Container(
-                    width: 250,
+                    width: MediaQuery.of(context).size.width * (250/411.4),
                     height: double.infinity,
                     decoration: BoxDecoration(
                         gradient: LinearGradient(
@@ -47,7 +43,7 @@ class SideBar extends StatelessWidget {
                       child: SingleChildScrollView(
                         child: Column(
                           children: [
-                            InfoCard(name: userData.firstName, userStatus: userData.memberStatus),
+                            //InfoCard(name: userData.firstName, userStatus: userData.memberStatus),
                             Padding(
                               padding: const EdgeInsets.only(top: 32.0, bottom: 16.0),
                               child: Text(
@@ -72,7 +68,7 @@ class SideBar extends StatelessWidget {
                             ),
                             SideMenuTile(
                               iconName: Icon(Icons.monetization_on, color: Colors.white),
-                              sideMenuOption: "Pay Dues - Omella",
+                              sideMenuOption: "Payments - Omella (Coming Soon)",
                             ),
                             SideMenuTile(
                               iconName: Icon(Icons.exit_to_app, color: Colors.white),

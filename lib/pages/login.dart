@@ -44,7 +44,7 @@ class _LoginState extends State<Login> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            SizedBox(height: 30,),
+            SizedBox(height: MediaQuery.of(context).size.height * (30/683.4),),
             Padding(
               padding: EdgeInsets.all(20),
               child: Row(
@@ -53,18 +53,18 @@ class _LoginState extends State<Login> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text("PGN Login", style: TextStyle(color: Colors.white, fontSize: 40),),
-                      SizedBox(height: 10,),
+                      SizedBox(height: MediaQuery.of(context).size.height * (10/683.4)),
                       Text("Welcome Back!", style: TextStyle(color: Colors.white, fontSize: 18),),
                     ],
                   ),
-                  SizedBox(width: 30.0),
+                  SizedBox(width: MediaQuery.of(context).size.width * (30/411.4)),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Image(
                         image: AssetImage('assets/sparty.png'),
-                        height: 150,
-                        width: 150,
+                        height: MediaQuery.of(context).size.height * (150/683.4),
+                        width: MediaQuery.of(context).size.width * (150/411.4),
                       ),
                     ],
                   ),

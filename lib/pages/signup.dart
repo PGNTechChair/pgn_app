@@ -23,7 +23,7 @@ class _SignUpState extends State<SignUp> {
   final _formKey = GlobalKey<FormState>();
   bool loading = false;
   final List<String> years = ['Freshman', 'Sophomore', 'Junior', 'Senior'];
-  final List<String> statuses = ['Member', 'Rushee', 'Guest'];
+  final List<String> statuses = ['PGN Member', 'Guest'];
 
 
   // text field state
@@ -64,7 +64,7 @@ class _SignUpState extends State<SignUp> {
                   Container(
                     margin: EdgeInsets.fromLTRB(20,20,20,0),
                     width: double.infinity,
-                    height: 135,
+                    height: MediaQuery.of(context).size.height * (135/683.4),
                     child: Align(
                         alignment: Alignment.bottomCenter,
                           child: Text(
@@ -160,8 +160,8 @@ class _SignUpState extends State<SignUp> {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(10,0,10,0),
                     child: SizedBox(
-                      width: 300,
-                      height: 80,
+                      width: MediaQuery.of(context).size.width * (300/411.4),
+                      height: MediaQuery.of(context).size.height * (80/683.4),
                       child: TextFormField(
                         validator: (String? val) {
                           if (val != null && val.isEmpty)
@@ -203,8 +203,8 @@ class _SignUpState extends State<SignUp> {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(10,0,10,0),
                     child: SizedBox(
-                      width: 300,
-                      height: 80,
+                      width: MediaQuery.of(context).size.width * (300/411.4),
+                      height: MediaQuery.of(context).size.height * (80/683.4),
                       child: TextFormField(
                         validator: (String? val) {
                           if (val != null && val.isEmpty)
@@ -290,8 +290,8 @@ class _SignUpState extends State<SignUp> {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(10,0,10,0),
                     child: SizedBox(
-                      width: 300,
-                      height: 80,
+                      width: MediaQuery.of(context).size.width * (300/411.4),
+                      height: MediaQuery.of(context).size.height * (80/683.4),
                       child: TextFormField(
                         validator: (String? val) {
                           if (val != null && val.isEmpty || !val!.contains("@"))
@@ -333,8 +333,8 @@ class _SignUpState extends State<SignUp> {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(10,0,10,0),
                     child: SizedBox(
-                      width: 300,
-                      height: 80,
+                      width: MediaQuery.of(context).size.width * (300/411.4),
+                      height: MediaQuery.of(context).size.height * (80/683.4),
                       child: TextFormField(
                         validator: (String? val) {
                           if (val != null && val.length < 6)
@@ -376,8 +376,8 @@ class _SignUpState extends State<SignUp> {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(10,0,10,0),
                     child: SizedBox(
-                      width: 300,
-                      height: 80,
+                      width: MediaQuery.of(context).size.width * (300/411.4),
+                      height: MediaQuery.of(context).size.height * (80/683.4),
                       child: TextFormField(
                         validator: (String? val) {
                           if (val != null && val.isEmpty)
@@ -419,8 +419,8 @@ class _SignUpState extends State<SignUp> {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(10,0,10,0),
                     child: SizedBox(
-                      width: 300,
-                      height: 80,
+                      width: MediaQuery.of(context).size.width * (300/411.4),
+                      height: MediaQuery.of(context).size.height * (80/683.4),
                       child: DropdownButtonFormField(
                         value: "Freshman",
                         decoration: InputDecoration(

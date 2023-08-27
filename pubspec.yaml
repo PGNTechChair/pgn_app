@@ -34,7 +34,10 @@ dependencies:
   firebase_core: ^2.14.0
   flutter:
     sdk: flutter
+  flutter_circular_text: ^0.3.1
   flutter_spinkit: ^5.2.0
+  flutter_svg: ^2.0.7
+  google_fonts: ^5.1.0
   provider: ^6.0.5
   rive: ^0.11.8
   settings_ui: ^2.0.2
@@ -75,8 +78,6 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/
-
-
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
