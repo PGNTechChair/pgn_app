@@ -49,7 +49,7 @@ class _SpotlightPage6State extends State<SpotlightPage6> {
                                 borderRadius: BorderRadius.circular(5)
                             ),
                             child: Image.asset(
-                              "assets/RahulRao.png",
+                              "assets/RahulRaoLogo.png",
                               width: MediaQuery.of(context).size.width- 100,
                               height: MediaQuery.of(context).size.width- 100,
                               fit: BoxFit.fitWidth,
@@ -117,17 +117,17 @@ class _SpotlightPage6State extends State<SpotlightPage6> {
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),
-                                title: Text("Managed multi-million dollar projects dedicated to advertising strategies on major websites."),
+                                title: Text("Managed multi-million dollar projects dedicated to advertising strategies on major websites"),
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),
-                                title: Text("Took part in negotiation meetings where budget spending was discussed for the company."),
+                                title: Text("Took part in negotiation meetings where budget spending was discussed for the company"),
                               ),
                               // Add more list tiles for other points
                               // ...
                               SizedBox(height: 10.0), // Add spacing
                               Text(
-                                "Rahul emphasizes that the most important thing with internships is to start early. Whether if the context means you are a freshmen or if it's considered to be the beginning of the school year. Grant yourself the ability to relax after you get that golden ticket to the company of your dream.",
+                                "Rahul emphasizes that the most important thing with internships is to start early. Whether if the context means you are a freshmen or if it's considered to be the beginning of the school year. Grant yourself the ability to relax after you get that golden ticket to the company of your dream",
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
                                 ),

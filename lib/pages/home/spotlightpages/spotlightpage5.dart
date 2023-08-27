@@ -49,7 +49,7 @@ class _SpotlightPage5State extends State<SpotlightPage5> {
                                 borderRadius: BorderRadius.circular(5)
                             ),
                             child: Image.asset(
-                              "assets/OwenLee.png",
+                              "assets/OwenLeeLogo.png",
                               width: MediaQuery.of(context).size.width- 100,
                               height: MediaQuery.of(context).size.width- 100,
                               fit: BoxFit.fitWidth,

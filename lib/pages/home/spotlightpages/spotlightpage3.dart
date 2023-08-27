@@ -49,7 +49,7 @@ class _SpotlightPage3State extends State<SpotlightPage3> {
                                 borderRadius: BorderRadius.circular(5)
                             ),
                             child: Image.asset(
-                              "assets/SamanthaChin.png",
+                              "assets/SamanthaChinLogo.png",
                               width: MediaQuery.of(context).size.width- 100,
                               height: MediaQuery.of(context).size.width- 100,
                               fit: BoxFit.fill
@@ -117,15 +117,15 @@ class _SpotlightPage3State extends State<SpotlightPage3> {
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),
-                                title: Text('Co-led a presentation committee which helped organize Lunch and Learn presentations for full-time employees '),
+                                title: Text('Co-led a presentation committee which helped organize Lunch and Learn presentations for full-time employees'),
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),
-                                title: Text("Achieved enchanced communication and leadership skills."),
+                                title: Text("Achieved enchanced communication and leadership skills"),
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),
-                                title: Text("Utilized Microsoft applications such as Sharepoint to make website pages."),
+                                title: Text("Utilized Microsoft applications such as Sharepoint to make website pages"),
                               ),
                               // Add more list tiles for other points
                               // ...

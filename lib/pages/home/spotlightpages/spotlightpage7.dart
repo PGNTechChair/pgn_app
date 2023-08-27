@@ -49,7 +49,7 @@ class _SpotlightPage7State extends State<SpotlightPage7> {
                                 borderRadius: BorderRadius.circular(5)
                             ),
                             child: Image.asset(
-                              "assets/ShreyaParepally.png",
+                              "assets/ShreyaParepallyLogo.png",
                               width: MediaQuery.of(context).size.width- 100,
                               height: MediaQuery.of(context).size.width- 100,
                               fit: BoxFit.fitWidth,
@@ -121,7 +121,7 @@ class _SpotlightPage7State extends State<SpotlightPage7> {
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),
-                                title: Text("Sent out phishing emails to employees of the company to test the awareness of the staff regarding scam emails."),
+                                title: Text("Sent out phishing emails to employees of the company to test the awareness of the staff regarding scam emails"),
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),

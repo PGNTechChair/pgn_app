@@ -49,7 +49,7 @@ class _SpotlightPage4State extends State<SpotlightPage4> {
                                 borderRadius: BorderRadius.circular(5)
                             ),
                             child: Image.asset(
-                              "assets/LukeBoldman.png",
+                              "assets/LukeBoldmanLogo.png",
                               width: MediaQuery.of(context).size.width- 100,
                               height: MediaQuery.of(context).size.width- 100,
                               fit: BoxFit.fitWidth,
@@ -117,15 +117,15 @@ class _SpotlightPage4State extends State<SpotlightPage4> {
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),
-                                title: Text("Collaborated with engineers to test UI changes of several applications."),
+                                title: Text("Collaborated with engineers to test UI changes of several applications"),
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),
-                                title: Text("Expanded his sales encounters internationally to places like the United Kingdom, India, and Australia."),
+                                title: Text("Expanded his sales encounters internationally to places like the United Kingdom, India, and Australia"),
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),
-                                title: Text("Performed data analytics that aided employees to seek insights about the company."),
+                                title: Text("Performed data analytics that aided employees to seek insights about the company"),
                               ),
                               // Add more list tiles for other points
                               // ...

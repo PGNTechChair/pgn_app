@@ -22,9 +22,9 @@ class StoryPage3 extends StatefulWidget {
 
 class _StoryPage3State extends State<StoryPage3> {
 
-  List<String> images = ["ShreyaPeddiLogo.png", "DakaraiYoungLogo.png", "SamanthaChinLogo.png",
-                        "LukeBoldmanLogo.png", "OwenLeeLogo.png", "RahulRaoLogo.png",
-                        "ShreyaParepallyLogo.png", "JackieLeeLogo.png", "AlyseBelkinLogo.png" ];
+  List<String> images = ["ShreyaPeddi.png", "DakaraiYoung.png", "SamanthaChin.png",
+                        "LukeBoldman.png", "OwenLee.png", "RahulRao.png",
+                        "ShreyaParepally.png", "JackieLee.png", "AlyseBelkin.png" ];
 
   void _navigateToSpotlightPage(BuildContext context, int index) {
     Widget newPage;

@@ -49,7 +49,7 @@ class _SpotlightPage1State extends State<SpotlightPage1> {
                               borderRadius: BorderRadius.circular(5)
                           ),
                           child: Image.asset(
-                            "assets/ShreyaPeddi.png",
+                            "assets/ShreyaPeddiLogo.png",
                             width: MediaQuery.of(context).size.width - 100,
                             height: MediaQuery.of(context).size.width - 100,
                           ),

@@ -49,7 +49,7 @@ class _SpotlightPage2State extends State<SpotlightPage2> {
                                 borderRadius: BorderRadius.circular(5)
                             ),
                             child: Image.asset(
-                              "assets/DakaraiYoung.png",
+                              "assets/DakaraiYoungLogo.png",
                               width: MediaQuery.of(context).size.width- 100,
                               height: MediaQuery.of(context).size.width- 100,
                               fit: BoxFit.fitWidth,
@@ -70,7 +70,7 @@ class _SpotlightPage2State extends State<SpotlightPage2> {
                         Container(
                           width: MediaQuery.of(context).size.width - 50,
                           child: Text(
-                            "Dell - Supply Chain Management",
+                            "Dell Technologies - Supply Chain",
                             textAlign: TextAlign.center,
                             style: GoogleFonts.bangers(
                               fontSize: 24,
@@ -97,7 +97,7 @@ class _SpotlightPage2State extends State<SpotlightPage2> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Unveiling Internship Insights: Seeking New Ways to Treat a Customer',
+                                'Unveiling Internship Insights: Optimizing New Experiences',
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 16.0,
@@ -105,7 +105,7 @@ class _SpotlightPage2State extends State<SpotlightPage2> {
                               ),
                               SizedBox(height: 10.0), // Add spacing between title and content
                               Text(
-                                "Pursuing an early start for internships, upcoming Sophomore Samantha Chin, saught out the opportunity to achieve further growth in areas such as public speaking and presentations.",
+                                "Dakarai combines skills found both in the classroom and PGN to stand out considering his application for Dell to the final days of his internship. The importance of research and discovery was what fueled Dakarai's success throughout his trials",
                                 style: TextStyle(fontSize: 16),
                               ),
                               SizedBox(height: 10.0), // Add spacing between paragraphs
@@ -117,28 +117,26 @@ class _SpotlightPage2State extends State<SpotlightPage2> {
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),
-                                title: Text('Co-led a presentation committee which helped organize Lunch and Learn presentations for full-time employees '),
+                                title: Text("Created new processes for adding technology online for clients to choose from."),
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),
-                                title: Text("Achieved enchanced communication and leadership skills."),
+                                title: Text("Optimized technology transfer to regions internationally"),
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),
-                                title: Text("Utilized Microsoft applications such as Sharepoint to make website pages."),
+                                title: Text("Became more familiar with tools such as Excel, PowerBI, and Tableau"),
                               ),
-                              // Add more list tiles for other points
-                              // ...
                               SizedBox(height: 10.0), // Add spacing
                               Text(
-                                "The tasks given by Blue Cross Blue Shield gave Samantha the perfect opportunity to perform using her Marketing major and Data Science minor.",
+                                "All the skills that Dakarai acquired will be certainly be used in the future, where he will be one step ahead of the game.",
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
                                 ),
                               ),
                               SizedBox(height: 10.0), // Add final spacing
                               Text(
-                                "In her free time, Samantha enjoys reading, watching and playing soccer, watching YouTube, and kayaking.",
+                                "Dakarai has a pool of talents such as playing the guitar, skateboarding, and through his hobby of photography.",
                                 style: TextStyle(
                                   color: Colors.grey,
                                 ),
