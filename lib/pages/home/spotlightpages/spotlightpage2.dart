@@ -105,7 +105,7 @@ class _SpotlightPage2State extends State<SpotlightPage2> {
                               ),
                               SizedBox(height: 10.0), // Add spacing between title and content
                               Text(
-                                "Dakarai combines skills found both in the classroom and PGN to stand out considering his application for Dell to the final days of his internship. The importance of research and discovery was what fueled Dakarai's success throughout his trials",
+                                "Dakarai combines skills found both in the classroom and PGN to stand out considering his application for Dell to the final days of his internship. The importance of research and discovery was what fueled Dakarai's success throughout his trials.",
                                 style: TextStyle(fontSize: 16),
                               ),
                               SizedBox(height: 10.0), // Add spacing between paragraphs
@@ -117,7 +117,7 @@ class _SpotlightPage2State extends State<SpotlightPage2> {
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),
-                                title: Text("Created new processes for adding technology online for clients to choose from."),
+                                title: Text("Created new processes for adding technology online for clients to choose from"),
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),
