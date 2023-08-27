@@ -78,8 +78,8 @@ class _SpotlightPage9State extends State<SpotlightPage9> {
                           ),
                         ),
                         Divider(
-                            color: Colors.blue[900],
-                            thickness: 2.0,
+                            color: Colors.green[900],
+                            thickness: 3.0,
                             height: 20.0
                         ),
                         Container(
@@ -97,7 +97,7 @@ class _SpotlightPage9State extends State<SpotlightPage9> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Unveiling Internship Insights: Protecting ',
+                                'Unveiling Internship Insights: Navigating Growth and Friendships in a Journey through a Big 4 Internship ',
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 16.0,
@@ -105,7 +105,7 @@ class _SpotlightPage9State extends State<SpotlightPage9> {
                               ),
                               SizedBox(height: 10.0), // Add spacing between title and content
                               Text(
-                                "Pursuing an early start for internships, upcoming Sophomore Samantha Chin, saught out the opportunity to achieve further growth in areas such as public speaking and presentations.",
+                                "Key highlights of Alyse's internship were centered around the people and events that shaped her experience. She was able to forge connections with peers inside the office and carry onto friendships that extended outside of the 9-5 job.",
                                 style: TextStyle(fontSize: 16),
                               ),
                               SizedBox(height: 10.0), // Add spacing between paragraphs
@@ -117,24 +117,24 @@ class _SpotlightPage9State extends State<SpotlightPage9> {
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),
-                                title: Text("Managed multi-million dollar projects dedicated to advertising strategies on major websites."),
+                                title: Text("Engaged in auditing internal controls and maintained essential documentation, updating when needed"),
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),
-                                title: Text("Took part in negotiation meetings where budget spending was discussed for the company."),
+                                title: Text("Became equiped with a comprehensive understanding of the world of Big 4 Finance and Accounting."),
                               ),
                               // Add more list tiles for other points
                               // ...
                               SizedBox(height: 10.0), // Add spacing
                               Text(
-                                "The tasks given by Blue Cross Blue Shield gave Samantha the perfect opportunity to perform using her Marketing major and Data Science minor.",
+                                "Alyse refers to PGN as a central player in her success securing the Deloitte internship and prospering through the eight week program, Whether if it was through her two hour mock interview with her pledge educator or guidance from our alumni network.",
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
                                 ),
                               ),
                               SizedBox(height: 10.0), // Add final spacing
                               Text(
-                                "In her free time, Samantha enjoys reading, watching and playing soccer, watching YouTube, and kayaking.",
+                                "When not studying or working, Alyse enjoys a diverse set of activities such as cooking, spending time with friends, running, and trying new restaurants. ",
                                 style: TextStyle(
                                   color: Colors.grey,
                                 ),
