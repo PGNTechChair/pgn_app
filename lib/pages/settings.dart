@@ -22,6 +22,9 @@ class _SettingsState extends State<Settings> {
   late String? _currentLastName = '';
   late String? _currentMajor = '';
   late String? _currentYear = '';
+  late String? _currentPhoneNumber = '';
+  late String? _currentAddress = '';
+  late String? _currentEmail = '';
 
   @override
   Widget build(BuildContext context) {
@@ -91,6 +94,30 @@ class _SettingsState extends State<Settings> {
                         ),
                       ),
                       CardWithLabel(
+                        label: "Phone Number",
+                        icon: Icon(Icons.phone),
+                        child: TextFormField(
+                          cursorColor: Colors.amber,
+                          initialValue: userData?.phoneNumber,
+                          decoration: textInputDecoration,
+                          validator: (val) =>
+                          val!.isEmpty ? "Please enter your last name" : null,
+                          onChanged: (val) => setState(() => _currentPhoneNumber = val),
+                        ),
+                      ),
+                      CardWithLabel(
+                        label: "Address",
+                        icon: Icon(Icons.home),
+                        child: TextFormField(
+                          cursorColor: Colors.amber,
+                          initialValue: userData?.address,
+                          decoration: textInputDecoration,
+                          validator: (val) =>
+                          val!.isEmpty ? "Please enter your last name" : null,
+                          onChanged: (val) => setState(() => _currentAddress = val),
+                        ),
+                      ),
+                      CardWithLabel(
                         label: "Major",
                         icon: Icon(Icons.school),
                         child: TextFormField(
@@ -142,6 +169,14 @@ class _SettingsState extends State<Settings> {
                             {
                               _currentLastName = null;
                             }
+                            if (_currentPhoneNumber == "")
+                            {
+                              _currentPhoneNumber = null;
+                            }
+                            if (_currentAddress == "")
+                            {
+                              _currentAddress = null;
+                            }
 
                             if(_formKey.currentState!.validate())
                             {
@@ -150,6 +185,8 @@ class _SettingsState extends State<Settings> {
                                   _currentYear ?? userData!.year,
                                   _currentFirstName ?? userData!.firstName,
                                   _currentLastName ?? userData!.lastName,
+                                  _currentPhoneNumber ?? userData!.phoneNumber,
+                                  _currentAddress ?? userData!.address,
                                   userData!.memberStatus ?? ''
                               );
                               if (mounted) Navigator.pop(context);
