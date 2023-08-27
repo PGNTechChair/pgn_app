@@ -48,7 +48,6 @@ class SideMenuTile extends StatelessWidget {
         ],
       );
     }
-
     else if (sideMenuOption == "PGN Website")
     {
       return Column(
@@ -71,8 +70,6 @@ class SideMenuTile extends StatelessWidget {
         ],
       );
     }
-
-
     else if (sideMenuOption == "Settings")
     {
       return Column(
@@ -100,7 +97,6 @@ class SideMenuTile extends StatelessWidget {
         ],
       );
     }
-
     else {
       return Column(
         children: [
@@ -121,7 +117,5 @@ class SideMenuTile extends StatelessWidget {
         ],
       );
     }
-
-
   }
 }

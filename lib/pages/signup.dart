@@ -23,7 +23,7 @@ class _SignUpState extends State<SignUp> {
   final _formKey = GlobalKey<FormState>();
   bool loading = false;
   final List<String> years = ['Freshman', 'Sophomore', 'Junior', 'Senior'];
-  final List<String> statuses = ['Member', 'Rushee', 'Guest'];
+  final List<String> statuses = ['PGN Member', 'Guest'];
 
 
   // text field state
@@ -35,6 +35,8 @@ class _SignUpState extends State<SignUp> {
   String lastName = '';
   String error = '';
   String memberStatus = '';
+  String phoneNumber = '';
+  String address = '';
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +66,7 @@ class _SignUpState extends State<SignUp> {
                   Container(
                     margin: EdgeInsets.fromLTRB(20,20,20,0),
                     width: double.infinity,
-                    height: 135,
+                    height: MediaQuery.of(context).size.height * (135/683.4),
                     child: Align(
                         alignment: Alignment.bottomCenter,
                           child: Text(
@@ -160,8 +162,8 @@ class _SignUpState extends State<SignUp> {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(10,0,10,0),
                     child: SizedBox(
-                      width: 300,
-                      height: 80,
+                      width: MediaQuery.of(context).size.width * (300/411.4),
+                      height: MediaQuery.of(context).size.height * (80/683.4),
                       child: TextFormField(
                         validator: (String? val) {
                           if (val != null && val.isEmpty)
@@ -203,8 +205,8 @@ class _SignUpState extends State<SignUp> {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(10,0,10,0),
                     child: SizedBox(
-                      width: 300,
-                      height: 80,
+                      width: MediaQuery.of(context).size.width * (300/411.4),
+                      height: MediaQuery.of(context).size.height * (80/683.4),
                       child: TextFormField(
                         validator: (String? val) {
                           if (val != null && val.isEmpty)
@@ -290,8 +292,8 @@ class _SignUpState extends State<SignUp> {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(10,0,10,0),
                     child: SizedBox(
-                      width: 300,
-                      height: 80,
+                      width: MediaQuery.of(context).size.width * (300/411.4),
+                      height: MediaQuery.of(context).size.height * (80/683.4),
                       child: TextFormField(
                         validator: (String? val) {
                           if (val != null && val.isEmpty || !val!.contains("@"))
@@ -333,9 +335,10 @@ class _SignUpState extends State<SignUp> {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(10,0,10,0),
                     child: SizedBox(
-                      width: 300,
-                      height: 80,
+                      width: MediaQuery.of(context).size.width * (300/411.4),
+                      height: MediaQuery.of(context).size.height * (80/683.4),
                       child: TextFormField(
+                        obscureText: true,
                         validator: (String? val) {
                           if (val != null && val.length < 6)
                           {
@@ -363,6 +366,92 @@ class _SignUpState extends State<SignUp> {
                       child: Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
+                              "Phone Number *",
+                              style: TextStyle(
+                                fontSize: 15,
+                                letterSpacing: 2.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              )
+                          )
+                      )
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(10,0,10,0),
+                    child: SizedBox(
+                      width: MediaQuery.of(context).size.width * (300/411.4),
+                      height: MediaQuery.of(context).size.height * (80/683.4),
+                      child: TextFormField(
+                        validator: (String? val) {
+                          if (val != null && val.isEmpty)
+                          {
+                            return "required *";
+                          }
+                          return null;
+                        },
+                        onChanged: (val)
+                        {
+                          setState(() => phoneNumber = val);
+                        },
+                        decoration: InputDecoration(
+                          fillColor: Colors.white70,
+                          filled: true,
+                          border: OutlineInputBorder(),
+                          errorStyle: TextStyle(color: Colors.white, height: .7),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                      margin: EdgeInsets.fromLTRB(10, 20, 10, 0),
+                      width: double.infinity,
+                      height: 20,
+                      child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                              "Address *",
+                              style: TextStyle(
+                                fontSize: 15,
+                                letterSpacing: 2.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              )
+                          )
+                      )
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(10,0,10,0),
+                    child: SizedBox(
+                      width: MediaQuery.of(context).size.width * (300/411.4),
+                      height: MediaQuery.of(context).size.height * (80/683.4),
+                      child: TextFormField(
+                        validator: (String? val) {
+                          if (val != null && val.isEmpty)
+                          {
+                            return "required *";
+                          }
+                          return null;
+                        },
+                        onChanged: (val)
+                        {
+                          setState(() => address = val);
+                        },
+                        decoration: InputDecoration(
+                          fillColor: Colors.white70,
+                          filled: true,
+                          errorStyle: TextStyle(color: Colors.white, height: .7),
+                          border: OutlineInputBorder(),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                      margin: EdgeInsets.fromLTRB(10, 20, 10, 0),
+                      width: double.infinity,
+                      height: 20,
+                      child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
                               "Major *",
                               style: TextStyle(
                                 fontSize: 15,
@@ -376,8 +465,8 @@ class _SignUpState extends State<SignUp> {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(10,0,10,0),
                     child: SizedBox(
-                      width: 300,
-                      height: 80,
+                      width: MediaQuery.of(context).size.width * (300/411.4),
+                      height: MediaQuery.of(context).size.height * (80/683.4),
                       child: TextFormField(
                         validator: (String? val) {
                           if (val != null && val.isEmpty)
@@ -419,8 +508,8 @@ class _SignUpState extends State<SignUp> {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(10,0,10,0),
                     child: SizedBox(
-                      width: 300,
-                      height: 80,
+                      width: MediaQuery.of(context).size.width * (300/411.4),
+                      height: MediaQuery.of(context).size.height * (80/683.4),
                       child: DropdownButtonFormField(
                         value: "Freshman",
                         decoration: InputDecoration(
@@ -448,7 +537,7 @@ class _SignUpState extends State<SignUp> {
                         if (_formKey.currentState!.validate()) {
                           setState(() => loading = true);
                           dynamic result = await _authService.registerWithEmailAndPassword(
-                              email, password, major, year, firstName, lastName, memberStatus);
+                              email, password, major, year, firstName, lastName, phoneNumber, address, memberStatus);
 
                           if (result == null) {
                             setState(() {

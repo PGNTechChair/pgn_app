@@ -13,7 +13,7 @@ class DatabaseService {
       .collection("pgnmembers");
 
   Future updateUserData(String major, String year, String firstName,
-      String lastName, [String memberStatus = ""]) async
+      String lastName, String phoneNumber, String address, [String memberStatus = ""]) async
   {
     if (memberStatus != "") {
       return await pgnCollection.doc(uid).set({
@@ -21,6 +21,8 @@ class DatabaseService {
         'year': year,
         'firstName': firstName,
         'lastName': lastName,
+        'phoneNumber' : phoneNumber,
+        'address' : address,
         'memberStatus': memberStatus,
       });
     }
@@ -32,6 +34,8 @@ class DatabaseService {
         'year': year,
         'firstName':firstName,
         'lastName':lastName,
+        'phoneNumber' : phoneNumber,
+        'address' : address,
         'memberStatus': memberStatus,
       });
   }
@@ -46,7 +50,7 @@ class DatabaseService {
         year: doc.get("year").toString() ?? '',
         firstName: doc.get("firstName").toString() ?? '',
         lastName: doc.get("lastName").toString() ?? '',
-        memberStatus: doc.get("memberStatus").toString() ?? ''
+        memberStatus: doc.get("memberStatus").toString() ?? '',
       );
     }).toList();
   }
@@ -60,8 +64,9 @@ class DatabaseService {
       lastName: snapshot.get("lastName") ?? '',
       major: snapshot.get("major") ?? '',
       year: snapshot.get("year") ?? '',
+      phoneNumber: snapshot.get("phoneNumber") ?? '',
+      address: snapshot.get("address") ?? '',
       memberStatus: snapshot.get("memberStatus") ?? '',
-
     );
   }
 

@@ -1,7 +1,7 @@
 import "package:firebase_core/firebase_core.dart";
 import 'package:flutter/material.dart';
 import "package:pgn_app/models/user.dart";
-import "package:pgn_app/pages/home.dart";
+import 'package:pgn_app/pages/home/home.dart';
 import "package:pgn_app/pages/signup.dart";
 import "package:pgn_app/pages/login.dart";
 import "package:pgn_app/pages/wrapper.dart";
