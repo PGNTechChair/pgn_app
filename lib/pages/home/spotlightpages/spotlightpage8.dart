@@ -97,7 +97,7 @@ class _SpotlightPage8State extends State<SpotlightPage8> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Unveiling Internship Insights: Seeking New Ways to Treat a Customer',
+                                'Unveiling Internship Insights: Hitting the Bullseye for Quality Execution',
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 16.0,
@@ -105,7 +105,7 @@ class _SpotlightPage8State extends State<SpotlightPage8> {
                               ),
                               SizedBox(height: 10.0), // Add spacing between title and content
                               Text(
-                                "Pursuing an early start for internships, upcoming Sophomore Samantha Chin, saught out the opportunity to achieve further growth in areas such as public speaking and presentations.",
+                                "Jackie transferred her leadership skills from being the VP of Membership to her internship with Target. A lot of her work involved strategic planning which she was already well prepped for due to her fruitful efforts these past couple years at MSU.",
                                 style: TextStyle(fontSize: 16),
                               ),
                               SizedBox(height: 10.0), // Add spacing between paragraphs
@@ -117,28 +117,26 @@ class _SpotlightPage8State extends State<SpotlightPage8> {
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),
-                                title: Text('Co-led a presentation committee which helped organize Lunch and Learn presentations for full-time employees'),
+                                title: Text('Performed data analytics to seek company insights'),
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),
-                                title: Text("Achieved enchanced communication and leadership skills"),
+                                title: Text("Utilized GEMBA to improve processes of Target deliveries"),
                               ),
                               ListTile(
                                 leading: Icon(Icons.check_circle, color: Colors.green),
-                                title: Text("Utilized Microsoft applications such as Sharepoint to make website pages"),
+                                title: Text("Collaborated in large teams to efficiently finish her intern project"),
                               ),
-                              // Add more list tiles for other points
-                              // ...
                               SizedBox(height: 10.0), // Add spacing
                               Text(
-                                "The tasks given by Blue Cross Blue Shield gave Samantha the perfect opportunity to perform using her Marketing major and Data Science minor.",
+                                "Jackie has continuously been inspired to challenge herself. Target is just one more example of Jackie pushing past her previous limits.",
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
                                 ),
                               ),
                               SizedBox(height: 10.0), // Add final spacing
                               Text(
-                                "In her free time, Samantha enjoys reading, watching and playing soccer, watching YouTube, and kayaking.",
+                                "Outside of her leadership duties, Jackie loves to play video games with friends and spend time with her family.",
                                 style: TextStyle(
                                   color: Colors.grey,
                                 ),
