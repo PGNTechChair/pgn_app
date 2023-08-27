@@ -274,9 +274,10 @@ class _StoryPage2State extends State<StoryPage2> {
                           ),
                         ),
                       ),
+                      SizedBox(height: MediaQuery.of(context).size.height * 1/32),
                     ],
-                  )
-              )
+                  ),
+              ),
           ),
         )
     );

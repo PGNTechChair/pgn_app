@@ -181,6 +181,7 @@ class _CommunityState extends State<Community> with SingleTickerProviderStateMix
                     ),
                   ),
                 ),
+                SizedBox(height: MediaQuery.of(context).size.height * 1/32),
               ],
             ),
           ),

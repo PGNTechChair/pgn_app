@@ -29,7 +29,7 @@ class _StoryPage4State extends State<StoryPage4> {
         body: SafeArea(
             child: SingleChildScrollView(
               child: Container(
-                  margin: const EdgeInsets.only(left: 24, right: 24),
+                  margin: const EdgeInsets.only(left: 24, right: 24, top: 18),
                   child: Column(
                     children: [
                       Row(
